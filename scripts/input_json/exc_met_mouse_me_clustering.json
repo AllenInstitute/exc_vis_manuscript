@@ -1,0 +1,13 @@
+{
+    "ephys_file": "../data/patchseq/sparse_pca_components_mMET_exc_visp.csv",
+    "morph_file": "../data/patchseq/morph_features_mMET_exc_wide_normalized.csv",
+    "weights": [0.5, 1.0],
+    "n_cl": [10, 15, 20, 25, 30],
+    "min_consensus_n": 5,
+    "cluster_variants_file": "../derived_data/me_clustering/elmo_cluster_variants.csv",
+    "cocluster_matrix_file": "../derived_data/me_clustering/elmo_coclust_matrix.txt",
+    "cluster_labels_file": "../derived_data/me_clustering/elmo_clust_labels.csv",
+    "specimen_id_file": "../derived_data/me_clustering/elmo_specimen_ids.txt",
+    "jaccards_file": "../derived_data/me_clustering/elmo_jaccards.txt",
+    "ordering_file": "../derived_data/me_clustering/elmo_clust_ordering.txt"
+}

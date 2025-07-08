@@ -1,0 +1,832 @@
+# Remove default suffixes
+.SUFFIXES:
+
+# Files to run for figure generation
+
+SRC = $(wildcard fig_*.py)
+PDFS = $(SRC:.py=.pdf)
+
+# --------- DATA FILES ON INTERNAL SYSTEMS (PLACEHOLDER FILE PATHS) ---------
+PS_TX_DIR = /path/to/patchseq/tx/dir/
+PS_TX_ANNO_FILE = /path/to/patchseq/tx/dir/anno.feather
+PS_TX_DATA_FILE = /path/to/patchseq/tx/dir/data.feather
+PS_TX_MAPPING_FILE = /path/to/patchseq/tx/dir/mapping.memb.with.bp.40.csv
+REF_TX_DIR = /path/to/reference/tx/dir/
+REF_NORM_DAT = /path/to/reference/tx/norm.dat.rda
+REF_TX_ANNO_FILE = /path/to/reference/tx/dir/anno.feather
+REF_TX_DATA_FILE = /path/to/reference/tx/dir/data.feather
+LAYER_ALIGNED_SWC_DIR = /path/to/layer_aligned_swcs/
+CCF_SWC_DIR = /path/to/wnm/ccf_registered_swcs/
+WNM_LAYER_ALIGNED_SWC_DIR = /path/to/wnm/layer_aligned_swcs/
+
+# --------- FLATMAP DATA FILES -------------
+# (These files can be found here: https://ccf-streamlines.readthedocs.io/en/latest/data_files.html)
+FLATMAP_BUTTERFLY_PROJ_FILE = ../../flatmap/handoff/view_lookup/flatmap_butterfly.h5
+SURFACE_PATHS_FILE = ../../flatmap/handoff/streamlines/surface_paths_10_v3.h5
+CLOSEST_SURFACE_VOXEL_FILE = ../../flatmap/handoff/streamlines/closest_surface_voxel_lookup.h5
+STREAMLINE_LAYER_THICKNESS_FILE = ../../flatmap/handoff/cortical_metrics/cortical_layers_10_v2.h5
+FLATMAP_BUTTERFLY_ATLAS_FILE = ../../flatmap/handoff/master_updated/flatmap_butterfly.nrrd
+ATLAS_LABELS_FILE = ../../flatmap/handoff/master_updated/labelDescription_ITKSNAPColor.txt
+
+# File can be found here: https://download.alleninstitute.org/informatics-archive/current-release/mouse_ccf/annotation/ccf_2017/
+CCF_ANNOT_FILE = /path/to/ccf_2017/annotation_10.nrrd
+
+
+# --------- DATA FILES ---
+EPHYS_SPCA_FILE = ../data/patchseq/sparse_pca_components_mMET_exc_visp.csv
+EPHYS_SPCA_INFO_FILE = ../data/patchseq/spca_components_used_mMET_exc_visp.json
+EPHYS_FEATURE_FILE = ../data/patchseq/exc_mMET_ephys_features.csv
+MORPH_NORM_FILE = ../data/patchseq/morph_features_mMET_exc_wide_normalized.csv
+MORPH_UNNORM_FILE = ../data/patchseq/morph_features_mMET_exc_wide_unnormalized.csv
+MORPH_DEPTH_HIST_FILE = ../data/patchseq/aligned_histograms_mMET_exc.csv
+MORPH_AUTO_MANUAL_FILE = ../data/patchseq/auto_and_manual_morph_features_mMET_exc_wide_normalized.csv
+MET_ASSIGNMENTS_FILE = ../derived_data/exc_met_cell_text_assignments.csv
+MET_ASSIGNMENTS_NUMERICAL_FILE = ../derived_data/exc_met_cell_assignments.csv
+AP_WAVEFORM_FILE = ../derived_data/spca_complete_rheo_ap_waveforms.h5
+V1_EXC_DE_GENE_FILE = ../data/gene_lists/select_markers_exc_clusters.csv
+
+RESPONSE_GENE_FILE = ../data/gene_lists/exc_inc_response_genes_hrvatin.txt
+REF_SELECT_GENE_FILE = ../data/recluster_response_genes/ref_tasic_select_genes.csv
+REF_QC_FILE = ../data/recluster_response_genes/ref_tasic_rm_eigen.csv
+RECLUSTER_FILE = ../data/recluster_response_genes/subclass_by_subclass_cl_respgene.csv
+
+WNM_META_FILE = ../data/wnm/FullMorphMetaData_Master.csv
+WNM_PROJ_FILE = ../data/wnm/ProjectionMatrix_tip_and_branch_roll_up.csv
+
+LAYER_DEPTHS_FILE = ../data/mouse_me_and_met_avg_layer_depths.json
+
+KIM_ET_AL_ANNO_FILE = ../data/kim_et_al_2020/TableS4-Single\ nuclei\ sequencing\ sample\ metadata.xlsx
+KIM_ET_AL_LOGCPM_FILE = ../data/kim_et_al_2020/GSE133230_logCPM_945filtered_cells.csv
+KIM_ET_AL_MAPPING_FILE = ../data/kim_et_al_2020/Callaway_results_on_v1_and_v1_alm_taxonomies.csv
+KIM_ET_AL_EDGER_FILE = ../data/kim_et_al_2020/TableS5-Differentially\ expressed\ genes\ list\ for\ V1AL\ and\ V1PM\ in\ L23\ using\ Zinbwave-EdgeR.xlsx
+KIM_ET_AL_DESEQ2_FILE = ../data/kim_et_al_2020/TableS7-Differentially\ expressed\ genes\ list\ for\ V1AL\ and\ V1PM\ in\ L23\ using\ Zinbwave-DESeq2.xlsx
+
+
+# --------- RULES ---------------
+main: fig_met_summary.pdf fig_t_to_met_river_all.pdf fig_met_it.pdf fig_met_non_it.pdf
+all: $(PDFS)
+pdf: clean $(PDFS)
+
+# --------- FIGURE 1 ------------
+
+../derived_data/me_cell_ephys_sweep_info.json: ../scripts/me_cell_ephys_info.py ../data/patchseq/dataset_ids.txt ../data/patchseq/manually_failing_sweeps.csv
+	python $< \
+	--id_file ../data/patchseq/dataset_ids.txt \
+	--manual_fail_sweep_file ../data/patchseq/manually_failing_sweeps.csv \
+	--output_file $@
+
+../derived_data/rep_met_cells_from_dist.json: ../scripts/choose_representative_met_cells.py $(MET_ASSIGNMENTS_FILE) $(EPHYS_SPCA_FILE) $(MORPH_NORM_FILE)
+	python $< \
+	--met_type_file $(MET_ASSIGNMENTS_FILE) \
+	--ephys_feature_file $(EPHYS_SPCA_FILE) \
+	--morph_feature_file $(MORPH_NORM_FILE) \
+	--output_selection_file $@
+
+# Note that the layer_aligned_swcs directory is an internal
+fig_met_summary.pdf: fig_met_summary.py ../derived_data/rep_met_cells_from_dist.json $(LAYER_DEPTHS_FILE) ../derived_data/me_cell_ephys_sweep_info.json
+	python $< \
+	--met_selection_file ../derived_data/rep_met_cells_from_dist.json \
+	--layer_depths_file $(LAYER_DEPTHS_FILE) \
+	--layer_aligned_swc_dir $(LAYER_ALIGNED_SWC_DIR) \
+	--met_ephys_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--output_file $@
+
+
+# --------- RIVER PLOTS (FIGS 1, 2, 3) ------------
+
+fig_t_to_met_river.pdf fig_t_to_met_river_it.pdf fig_t_to_met_river_non_it.pdf: fig_t_to_met_river.py $(PS_TX_ANNO_FILE) $(MET_ASSIGNMENTS_FILE)
+	python $< \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--met_type_file $(MET_ASSIGNMENTS_FILE) \
+	--output_all_file fig_t_to_met_river.pdf \
+	--output_it_file fig_t_to_met_river_it.pdf \
+	--output_non_it_file fig_t_to_met_river_non_it.pdf
+
+# --------- FIGURE 2 ------------
+
+../derived_data/inferred_met_types.csv: ../scripts/infer_met_types.py $(EPHYS_SPCA_FILE) $(MORPH_AUTO_MANUAL_FILE) $(PS_TX_ANNO_FILE) $(MET_ASSIGNMENTS_NUMERICAL_FILE)
+	python $< \
+	--ephys_file $(EPHYS_SPCA_FILE) \
+	--auto_manual_morph_file $(MORPH_AUTO_MANUAL_FILE) \
+	--tx_anno_file $(PS_TX_ANNO_FILE) \
+	--met_type_file $(MET_ASSIGNMENTS_NUMERICAL_FILE) \
+	--inferred_met_type_file $@
+
+../derived_data/subthresh_tau_fits.csv: ../scripts/fit_subthresh_time_constants.py ../data/patchseq/l6it_all_cell_ids.txt
+	python $< \
+	--input_file ../data/patchseq/l6it_all_cell_ids.txt \
+	--manual_fail_sweep_file ../data/patchseq/manually_failing_sweeps.csv \
+	--output_file $@
+
+../derived_data/hump_measures_l6it.csv: ../scripts/fit_subthresh_hump.py ../data/patchseq/l6it_all_cell_ids.txt ../derived_data/subthresh_tau_fits.csv ../derived_data/me_cell_ephys_sweep_info.json
+	python $< \
+	--input_file ../data/patchseq/l6it_all_cell_ids.txt \
+	--subthresh_fit_file ../derived_data/subthresh_tau_fits.csv \
+	--ephys_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--output_file $@
+
+../derived_data/l6it_subthresh_risetimes.csv:../scripts/find_subthresh_depol_rise_time.py ../data/patchseq/l6it_all_cell_ids.txt  ../derived_data/subthresh_tau_fits.csv ../derived_data/me_cell_ephys_sweep_info.json
+	python $< \
+	--input_file ../data/patchseq/l6it_all_cell_ids.txt \
+	--subthresh_fit_file ../derived_data/subthresh_tau_fits.csv \
+	--ephys_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--output_file $@
+
+../derived_data/l6_it_de_ion_channel_results.csv ../derived_data/l5_et_de_ion_channel_results.csv: ../scripts/ref_de_ion_channels.R $(EPHYS_SPCA_FILE) ../derived_data/inferred_met_types.csv
+	Rscript $< $(REF_TX_DIR) $(PS_TX_DIR) $(EPHYS_SPCA_FILE) ../derived_data/inferred_met_types.csv
+
+$(AP_WAVEFORM_FILE): ../scripts/collect_rheo_ap_waveforms.py ../derived_data/me_cell_ephys_sweep_info.json
+	python $< \
+	--ephys_sweep_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--output_file $@
+
+fig_met_it.pdf: fig_met_it.py ../derived_data/inferred_met_types.csv $(MORPH_UNNORM_FILE) $(MORPH_DEPTH_HIST_FILE) $(LAYER_DEPTHS_FILE) $(EPHYS_FEATURE_FILE) $(AP_WAVEFORM_FILE) ../derived_data/me_cell_ephys_sweep_info.json ../derived_data/hump_measures_l6it.csv ../derived_data/subthresh_tau_fits.csv ../derived_data/l6it_subthresh_risetimes.csv ../derived_data/l6_it_de_ion_channel_results.csv
+	python $< \
+	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
+	--morph_file $(MORPH_UNNORM_FILE) \
+	--aligned_depths_file $(MORPH_DEPTH_HIST_FILE) \
+	--layer_depths_file $(LAYER_DEPTHS_FILE) \
+	--layer_aligned_swc_dir $(LAYER_ALIGNED_SWC_DIR) \
+	--ephys_features_file $(EPHYS_FEATURE_FILE) \
+	--ap_waveform_file $(AP_WAVEFORM_FILE) \
+	--ephys_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--hump_measure_file ../derived_data/hump_measures_l6it.csv \
+	--subthresh_fit_file ../derived_data/subthresh_tau_fits.csv \
+	--risetime_file ../derived_data/l6it_subthresh_risetimes.csv \
+	--l6it_de_ion_channels_file ../derived_data/l6_it_de_ion_channel_results.csv \
+	--output_file $@
+
+../derived_data/tx_umap_coordinates_patchseq_facs_co-embedded.csv : ../scripts/tx_umap_co-embedding.py $(PS_TX_DATA_FILE) $(REF_TX_DATA_FILE) $(PS_TX_ANNO_FILE) $(REF_TX_ANNO_FILE) $(V1_EXC_DE_GENE_FILE) ../data/patchseq/dataset_ids.txt
+	python $< \
+	--tx_data_file_1 $(PS_TX_DATA_FILE) \
+	--tx_data_file_2 $(REF_TX_DATA_FILE)  \
+	--anno_file_1 $(PS_TX_ANNO_FILE) \
+	--anno_file_2 $(REF_TX_ANNO_FILE) \
+	--facs_anno_file $(REF_TX_ANNO_FILE) \
+	--cluster_label_1 Tree_first_cl_label \
+	--cluster_label_2 cluster_label \
+	--genes_file $(V1_EXC_DE_GENE_FILE) \
+	--specimens_file_1 ../data/patchseq/dataset_ids.txt \
+	--log_data True \
+	--n_pcs 20 \
+	--scale_features False \
+	--corr_threshold 0.2 \
+	--min_dist 0.7 \
+	--n_neighbors 15 \
+	--required_tree_calls_1 "['Core', 'I1', 'I2', 'I3']" \
+	--required_subclasses_1 "['L2/3 IT','L4','L5 IT','L6 IT','L5 PT','NP','L6 CT','L6b']" \
+	--required_subclasses_2 "['L2/3 IT','L4','L5 IT','L6 IT','L5 PT','NP','L6 CT','L6b']" \
+	--output_file $@
+
+# Save UMAP seeds (seeded from t-type)
+../derived_data/umap_seeds_median_t_type.csv: ../scripts/save_umap_seeds.py ../data/patchseq/dataset_ids.txt $(PS_TX_ANNO_FILE) ../derived_data/tx_umap_coordinates_patchseq_facs_co-embedded.csv $(PS_TX_ANNO_FILE)
+	python $< \
+	--specimens_file ../data/patchseq/dataset_ids.txt \
+	--anno_file $(PS_TX_ANNO_FILE) \
+	--initial_positions_umap_file ../derived_data/tx_umap_coordinates_patchseq_facs_co-embedded.csv \
+	--initial_positions_feature_file $(PS_TX_ANNO_FILE) \
+	--initial_positions_feature Tree_first_cl_label \
+	--initial_positions_stat median \
+	--output_file $@
+
+# Create UMAP embedding of ephys data, initialized with transcriptomic UMAP positions
+../derived_data/ephys_umap_coordinates_t_seeded.csv: ../scripts/me_umap_embedding.py  $(EPHYS_SPCA_FILE) ../derived_data/umap_seeds_median_t_type.csv $(PS_TX_ANNO_FILE) $(REF_TX_ANNO_FILE) ../data/patchseq/dataset_ids.txt
+	python $< \
+	--features_file $(EPHYS_SPCA_FILE) \
+	--initial_positions_file ../derived_data/umap_seeds_median_t_type.csv \
+	--anno_file $(PS_TX_ANNO_FILE) \
+	--facs_anno_file $(REF_TX_ANNO_FILE) \
+	--min_dist 0.1 \
+	--n_neighbors 15 \
+	--specimens_file ../data/patchseq/dataset_ids.txt \
+	--required_tree_calls "['Core', 'I1', 'I2', 'I3']" \
+	--required_subclasses "['L2/3 IT','L4','L5 IT','L6 IT','L5 PT','NP','L6 CT','L6b']" \
+	--output_file $@
+
+# Create the UMAP embedding of morpho data, initialized with transcriptomic UMAP inferred MET type positions
+../derived_data/morpho_umap_coordinates_t_seeded.csv: ../scripts/me_umap_embedding.py $(MORPH_NORM_FILE) ../derived_data/umap_seeds_median_t_type.csv $(PS_TX_ANNO_FILE) $(REF_TX_ANNO_FILE) ../data/patchseq/dataset_ids.txt
+	python $< \
+	--features_file $(MORPH_NORM_FILE) \
+	--initial_positions_file ../derived_data/umap_seeds_median_t_type.csv \
+	--anno_file $(PS_TX_ANNO_FILE) \
+	--facs_anno_file $(REF_TX_ANNO_FILE) \
+	--min_dist 0.4 \
+	--n_neighbors 15 \
+	--random_state 32 \
+	--specimens_file ../data/patchseq/dataset_ids.txt \
+	--required_tree_calls "['Core', 'I1', 'I2', 'I3']" \
+	--required_subclasses "['L2/3 IT','L4','L5 IT','L6 IT','L5 PT','NP','L6 CT','L6b']" \
+	--output_file $@
+
+# Patch-seq transcriptomic UMAP (IT)
+fig2_UMAP_transcriptomic_Patch-seq-IT.pdf : fig_umap_panel.py ../derived_data/tx_umap_coordinates_patchseq_facs_co-embedded.csv $(PS_TX_ANNO_FILE) $(REF_TX_ANNO_FILE) ../data/patchseq/dataset_ids.txt
+	python $< \
+	--umap_file ../derived_data/tx_umap_coordinates_patchseq_facs_co-embedded.csv \
+	--modality transcriptomics_Patch-seq \
+	--patchseq_anno_file $(PS_TX_ANNO_FILE) \
+	--facs_anno_file $(REF_TX_ANNO_FILE) \
+	--specimens_file ../data/patchseq/dataset_ids.txt \
+	--focus_subclasses "['L2/3 IT','L4','L4 IT','L5 IT','L6 IT','L6 IT Car3']" \
+	--add_subclass_labels True \
+	--add_title True \
+	--add_legend True \
+	--output_file $@
+
+# Patch-seq electrophysiology UMAP (IT)
+fig2_UMAP_electrophysiology_Patch-seq-IT.pdf : fig_umap_panel.py ../derived_data/ephys_umap_coordinates_t_seeded.csv $(PS_TX_ANNO_FILE) $(REF_TX_ANNO_FILE) ../data/patchseq/dataset_ids.txt
+	python $< \
+	--umap_file ../derived_data/ephys_umap_coordinates_t_seeded.csv \
+	--modality electrophysiology_Patch-seq \
+	--patchseq_anno_file $(PS_TX_ANNO_FILE) \
+	--facs_anno_file $(REF_TX_ANNO_FILE) \
+	--specimens_file ../data/patchseq/dataset_ids.txt \
+	--focus_subclasses "['L2/3 IT','L4','L4 IT','L5 IT','L6 IT','L6 IT Car3']" \
+	--add_subclass_labels True \
+	--add_title True \
+	--add_legend True \
+	--output_file $@
+
+# Patch-seq morphology UMAP (IT)
+fig2_UMAP_morphology_Patch-seq-IT.pdf : fig_umap_panel.py ../derived_data/morpho_umap_coordinates_t_seeded.csv $(PS_TX_ANNO_FILE) $(REF_TX_ANNO_FILE) ../data/patchseq/dataset_ids.txt
+	python $< \
+	--umap_file ../derived_data/morpho_umap_coordinates_t_seeded.csv \
+	--modality morphology_Patch-seq \
+	--patchseq_anno_file $(PS_TX_ANNO_FILE) \
+	--facs_anno_file $(REF_TX_ANNO_FILE) \
+	--specimens_file ../data/patchseq/dataset_ids.txt \
+	--focus_subclasses "['L2/3 IT','L4','L4 IT','L5 IT','L6 IT','L6 IT Car3']" \
+	--add_subclass_labels True \
+	--add_title True \
+	--add_legend True \
+	--output_file $@
+
+
+# --------- FIGURE 3 ------------
+
+../derived_data/l5et_avg_inst_rates.csv: ../scripts/measure_inst_avg_rates.py ../data/patchseq/l5et_all_cell_ids.txt ../derived_data/me_cell_ephys_sweep_info.json
+	python $< \
+	--input_file ../data/patchseq/l5et_all_cell_ids.txt \
+	--ephys_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--output_file $@
+
+fig_met_non_it.pdf: fig_met_non_it.py ../derived_data/inferred_met_types.csv $(MORPH_UNNORM_FILE) $(MORPH_DEPTH_HIST_FILE) $(LAYER_DEPTHS_FILE) $(EPHYS_FEATURE_FILE) $(AP_WAVEFORM_FILE) ../derived_data/me_cell_ephys_sweep_info.json ../derived_data/l5et_avg_inst_rates.csv ../derived_data/l5_et_de_ion_channel_results.csv
+	python $< \
+	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
+	--morph_file $(MORPH_UNNORM_FILE) \
+	--aligned_depths_file $(MORPH_DEPTH_HIST_FILE) \
+	--layer_depths_file $(LAYER_DEPTHS_FILE) \
+	--layer_aligned_swc_dir $(LAYER_ALIGNED_SWC_DIR) \
+	--ephys_features_file $(EPHYS_FEATURE_FILE) \
+	--ap_waveform_file $(AP_WAVEFORM_FILE) \
+	--ephys_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--et_inst_rate_file ../derived_data/l5et_avg_inst_rates.csv \
+	--l5et_de_ion_channels_file ../derived_data/l5_et_de_ion_channel_results.csv \
+	--output_file $@
+
+# Patch-seq transcriptomic UMAP (non-IT)
+fig3_UMAP_transcriptomic_Patch-seq-nonIT.pdf: fig_umap_panel.py ../derived_data/tx_umap_coordinates_patchseq_facs_co-embedded.csv $(PS_TX_ANNO_FILE) $(REF_TX_ANNO_FILE) ../data/patchseq/dataset_ids.txt
+	python $< \
+	--umap_file ../derived_data/tx_umap_coordinates_patchseq_facs_co-embedded.csv \
+	--modality transcriptomics_Patch-seq \
+	--patchseq_anno_file $(PS_TX_ANNO_FILE) \
+	--facs_anno_file $(REF_TX_ANNO_FILE) \
+	--specimens_file ../data/patchseq/dataset_ids.txt \
+	--focus_subclasses "['L5 ET','L5 ET Chrna6','NP','L6 CT','L6b']" \
+	--add_subclass_labels True \
+	--add_title True \
+	--add_legend True \
+	--output_file $@
+
+# Patch-seq electrophysiology UMAP (non-IT)
+fig3_UMAP_electrophysiology_Patch-seq-nonIT-met.pdf : fig_umap_panel.py ../derived_data/ephys_umap_coordinates_t_seeded.csv $(PS_TX_ANNO_FILE) $(REF_TX_ANNO_FILE) ../data/patchseq/dataset_ids.txt
+	python $< \
+	--umap_file ../derived_data/ephys_umap_coordinates_t_seeded.csv \
+	--modality electrophysiology_Patch-seq \
+	--patchseq_anno_file $(PS_TX_ANNO_FILE) \
+	--facs_anno_file $(REF_TX_ANNO_FILE) \
+	--specimens_file ../data/patchseq/dataset_ids.txt \
+	--focus_subclasses "['L5 ET','L5 ET Chrna6','NP','L6 CT','L6b']" \
+	--add_subclass_labels True \
+	--add_title True \
+	--add_legend True \
+	--output_file $@
+
+# Patch-seq morphology UMAP (non-IT)
+fig3_UMAP_morphology_Patch-seq-nonIT.pdf : fig_umap_panel.py ../derived_data/morpho_umap_coordinates_t_seeded.csv $(PS_TX_ANNO_FILE) $(REF_TX_ANNO_FILE) ../data/patchseq/dataset_ids.txt
+	python $< \
+	--umap_file ../derived_data/morpho_umap_coordinates_t_seeded.csv \
+	--modality morphology_Patch-seq \
+	--patchseq_anno_file $(PS_TX_ANNO_FILE) \
+	--facs_anno_file $(REF_TX_ANNO_FILE) \
+	--specimens_file ../data/patchseq/dataset_ids.txt \
+	--focus_subclasses "['L5 ET','L5 ET Chrna6','NP','L6 CT','L6b']" \
+	--add_subclass_labels True \
+	--add_title True \
+	--add_legend True \
+	--output_file $@
+
+# --------- FIGURE 4 ------------
+
+# Used to generate rules for fits for each subclass
+SUBCLASS_ABBREV := L23-IT L4-L5-IT L6-IT L5L6-IT-Car3 L5-ET L5-NP L6-CT L6b L5-ET-Chrna6 L5-ET-non-Chrna6
+SUBCLASS_INDEX := 1 2 3 4 5 6 7 8 9 10
+GET_FILE = $(word 1,$(subst :, ,$1))
+GET_INDEX = $(word 2,$(subst :, ,$1))
+
+# Tx PCs
+REF_WEIGHTS := $(patsubst %,../derived_data/ref_tx_pca_results/%_tx_pca_weights.csv,$(SUBCLASS_ABBREV))
+REF_CENTERS := $(patsubst %,../derived_data/ref_tx_pca_results/%_tx_pca_centers.csv,$(SUBCLASS_ABBREV))
+REF_TRANSFORMED := $(patsubst %,../derived_data/ref_tx_pca_results/%_tx_pca_transformed.csv,$(SUBCLASS_ABBREV))
+
+$(REF_WEIGHTS) $(REF_CENTERS) $(REF_TRANSFORMED): ../scripts/ref_tx_pca.R
+	Rscript $< $(REF_TX_DIR) $(REF_NORM_DAT)
+
+
+PS_TRANSFORMED := $(patsubst %,../derived_data/ps_tx_pca_results/%_ps_transformed_pcs.csv,$(SUBCLASS_ABBREV))
+
+$(PS_TRANSFORMED): ../scripts/transform_ps_tx_with_ref_pcs.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) $(MET_ASSIGNMENTS_FILE) ../derived_data/inferred_met_types.csv
+	python $< \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ps_tx_data_file $(PS_TX_DATA_FILE) \
+	--met_type_file $(MET_ASSIGNMENTS_FILE) \
+	--inf_met_type_file ../derived_data/inferred_met_types.csv \
+	--ref_pc_dir ../derived_data/ref_tx_pca_results/ \
+	--output_pc_dir ../derived_data/ps_tx_pca_results/
+
+
+# Rules for single feature fits
+SINGLE_FT_FILES := $(patsubst %,../derived_data/single_feature_fits/single_features_elasticnet_cv_%.h5,$(SUBCLASS_ABBREV))
+SINGLE_FT_JOINED := $(join $(addsuffix :,$(SINGLE_FT_FILES)),$(SUBCLASS_INDEX))
+SINGLE_FT_PREREQS := $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv $(MORPH_UNNORM_FILE) $(EPHYS_SPCA_FILE)
+
+define SINGLE_FT_RECIPE
+$1: ../scripts/single_feature_elasticnet_cv.R $(SINGLE_FT_PREREQS)
+	Rscript $$< $2 $(SINGLE_FT_PREREQS) ../derived_data/ref_tx_pca_results/
+endef
+
+$(foreach j,$(SINGLE_FT_JOINED),$(eval $(call SINGLE_FT_RECIPE,$(call GET_FILE,$j),$(call GET_INDEX,$j))))
+
+
+# Rules for sparse RRR CV fits
+SRRR_CV_FILES = $(addsuffix .h5, $(addprefix ../derived_data/sparse_rrr_results/sparse_rrr_cv_, $(SUBCLASS_ABBREV)))
+SRRR_PREREQS = $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv $(MORPH_UNNORM_FILE) $(EPHYS_SPCA_FILE) ../derived_data/features_for_sp_rrr.json
+SRRR_NODIAM_PREREQS = $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv $(MORPH_UNNORM_FILE) ../derived_data/features_for_sp_rrr.json
+SRRR_CV_JOINED := $(join $(addsuffix :,$(SRRR_CV_FILES)),$(SUBCLASS_INDEX))
+
+define SRRR_RECIPE
+$(1): ../scripts/subclass_sparse_rrr_cv.R $(SRRR_PREREQS)
+	Rscript $$< $(2) $(SRRR_PREREQS) ../derived_data/ref_tx_pca_results/
+endef
+
+$(foreach j,$(SRRR_CV_JOINED),$(eval $(call SRRR_RECIPE,$(call GET_FILE,$(j)),$(call GET_INDEX,$(j)))))
+
+
+# Rules for tx pc elasticnet CV fits
+TXPC_CV_FILES = $(addsuffix .h5, $(addprefix ../derived_data/sparse_rrr_results/tx_pc_elasticnet_cv_, $(SUBCLASS_ABBREV)))
+TXPC_CV_JOINED := $(join $(addsuffix :,$(TXPC_CV_FILES)),$(SUBCLASS_INDEX))
+define TXPC_RECIPE
+$(1): ../scripts/subclass_tx_pc_elasticnet_cv.R $(SRRR_PREREQS)
+	Rscript $$< $(2) $(SRRR_PREREQS) ../derived_data/ps_tx_pca_results/
+endef
+
+$(foreach j,$(TXPC_CV_JOINED),$(eval $(call TXPC_RECIPE,$(call GET_FILE,$(j)),$(call GET_INDEX,$(j)))))
+
+
+../derived_data/features_for_sp_rrr.json: ../scripts/consolidate_single_feature_cv_results.py
+	python $< \
+	--ephys_component_info_file $(EPHYS_SPCA_INFO_FILE) \
+	--single_feature_results_dir ../derived_data/single_feature_fits/ \
+	--output_file $@
+
+../derived_data/srrr_hyperparams_subclass.json: ../scripts/select_sparse_rrr_hyperparameters.py ../derived_data/sparse_rrr_results/sparse_rrr_cv_*.h5 ../derived_data/sparse_rrr_results/tx_pc_elasticnet_cv_*.h5
+	python $< \
+	--input_dir ../derived_data/sparse_rrr_results/ \
+	--output_file $@
+
+../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5: ../scripts/subclass_sparse_rrr_selected.R $(SRRR_PREREQS) ../derived_data/srrr_hyperparams_subclass.json
+	Rscript $< $(SRRR_PREREQS) ../derived_data/srrr_hyperparams_subclass.json ../derived_data/ref_tx_pca_results/ $@
+
+../derived_data/ps_cells_kim_proj_pcs.csv: ../scripts/callaway_ps_pcs.py $(KIM_ET_AL_ANNO_FILE) $(KIM_ET_AL_LOGCPM_FILE) $(KIM_ET_AL_MAPPING_FILE) $(KIM_ET_AL_EDGER_FILE) $(KIM_ET_AL_DESEQ2_FILE) $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE)  ../derived_data/inferred_met_types.csv
+	python $< \
+	--call_anno_file $(KIM_ET_AL_ANNO_FILE) \
+	--call_logcpm_data_file $(KIM_ET_AL_LOGCPM_FILE) \
+	--call_mapping_file $(KIM_ET_AL_MAPPING_FILE) \
+	--call_edger_file $(KIM_ET_AL_EDGER_FILE) \
+	--call_deseq2_file $(KIM_ET_AL_DESEQ2_FILE) \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ps_tx_data_file $(PS_TX_DATA_FILE) \
+	--inf_met_type_file ../derived_data/inferred_met_types.csv \
+	--output_file $@
+
+../derived_data/l6b_subthresh_traces.h5: ../scripts/collect_l6b_subthresh_traces.py
+	python $< \
+	--inf_met_type_file ../derived_data/inferred_met_types.csv \
+	--ephys_sweep_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--output_file $@
+
+fig_sparse_rrr.pdf: fig_sparse_rrr.py latent_factor_plot.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass.json $(MORPH_UNNORM_FILE) $(EPHYS_SPCA_FILE) $(EPHYS_FEATURE_FILE) $(EPHYS_SPCA_INFO_FILE) $(AP_WAVEFORM_FILE) ../derived_data/me_cell_ephys_sweep_info.json ../derived_data/ps_cells_kim_proj_pcs.csv $(LAYER_DEPTHS_FILE) ../derived_data/l6b_subthresh_traces.h5
+	python $< \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ps_tx_data_file $(PS_TX_DATA_FILE) \
+	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
+	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--sparse_rrr_feature_file ../derived_data/features_for_sp_rrr.json \
+	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass.json \
+	--morph_file $(MORPH_UNNORM_FILE) \
+	--ephys_file $(EPHYS_SPCA_FILE) \
+	--ephys_features_file $(EPHYS_FEATURE_FILE) \
+	--spca_feature_info_file $(EPHYS_SPCA_INFO_FILE) \
+	--ap_waveform_file $(AP_WAVEFORM_FILE) \
+	--ephys_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--l23_it_proj_pc_file ../derived_data/ps_cells_kim_proj_pcs.csv \
+	--layer_depths_file $(LAYER_DEPTHS_FILE) \
+	--layer_aligned_swc_dir $(LAYER_ALIGNED_SWC_DIR) \
+	--l6b_subthresh_traces_file ../derived_data/l6b_subthresh_traces.h5 \
+	--output_file $@
+
+# --------- FIGURE 5 ------------
+
+../derived_data/sparse_rrr_fits_with_selected_hyperparams_nodiam.h5: ../scripts/subclass_sparse_rrr_selected_nodiam.R $(SRRR_NODIAM_PREREQS) ../derived_data/srrr_hyperparams_subclass.json
+	Rscript $< $(SRRR_NODIAM_PREREQS) ../derived_data/srrr_hyperparams_subclass.json ../derived_data/ref_tx_pca_results/ $@
+
+../derived_data/sp_rrr_full_morph_latent_factors.csv: ../scripts/full_morph_latent_factors.py ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json $(MORPH_UNNORM_FILE)  ../data/wnm/RawFeaturesWide_ChamferCorr.csv  ../data/wnm/AxonRawReatureWide.csv $(WNM_META_FILE)
+	python $< \
+	--srrr_fits_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--srrr_fits_no_diam_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams_nodiam.h5 \
+	--srrr_features_file ../derived_data/features_for_sp_rrr.json \
+	--patchseq_morph_file $(MORPH_UNNORM_FILE) \
+	--input_dend_file ../data/wnm/RawFeaturesWide_ChamferCorr.csv \
+	--input_axon_file ../data/wnm/AxonRawReatureWide.csv \
+	--input_met_pred_file $(WNM_META_FILE) \
+	--output_file $@
+
+../derived_data/surface_ccf_coords.csv: ../scripts/streamline_top_coords.py $(WNM_META_FILE) $(SURFACE_PATHS_FILE) $(CLOSEST_SURFACE_VOXEL_FILE)
+	python $< \
+	--input_file $(WNM_META_FILE) \
+	--surface_paths_file $(SURFACE_PATHS_FILE) \
+	--closest_surface_voxel_reference_file $(CLOSEST_SURFACE_VOXEL_FILE) \
+	--output_file $@
+
+../derived_data/data_for_glm_lf.csv: ../scripts/combine_data_files_for_glm_lf.py ../derived_data/surface_ccf_coords.csv ../derived_data/sp_rrr_full_morph_latent_factors.csv $(WNM_META_FILE) $(WNM_PROJ_FILE)
+	python $< \
+	--input_surface_file ../derived_data/surface_ccf_coords.csv \
+	--input_latent_factor_file ../derived_data/sp_rrr_full_morph_latent_factors.csv \
+	--input_meta_file $(WNM_META_FILE) \
+	--input_proj_file $(WNM_PROJ_FILE) \
+	--output_file $@
+
+../derived_data/L23-IT_flat_morphs.h5: ../scripts/flatten_morphologies.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_BUTTERFLY_PROJ_FILE) $(SURFACE_PATHS_FILE) $(CLOSEST_SURFACE_VOXEL_FILE)
+	python $< \
+	--input_file ../derived_data/data_for_glm_lf.csv \
+	--projection_file $(FLATMAP_BUTTERFLY_PROJ_FILE) \
+	--surface_paths_file $(SURFACE_PATHS_FILE) \
+	--closest_surface_voxel_reference_file $(CLOSEST_SURFACE_VOXEL_FILE) \
+	--ccf_morph_dir $(CCF_SWC_DIR) \
+	--met_type_selection "['L2/3 IT']" \
+	--output_file $@
+
+../derived_data/L6b_flat_morphs.h5: ../scripts/flatten_morphologies.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_BUTTERFLY_PROJ_FILE) $(SURFACE_PATHS_FILE) $(CLOSEST_SURFACE_VOXEL_FILE)
+	python $< \
+	--input_file ../derived_data/data_for_glm_lf.csv \
+	--projection_file $(FLATMAP_BUTTERFLY_PROJ_FILE) \
+	--surface_paths_file $(SURFACE_PATHS_FILE) \
+	--closest_surface_voxel_reference_file $(CLOSEST_SURFACE_VOXEL_FILE) \
+	--ccf_morph_dir $(CCF_SWC_DIR) \
+	--met_type_selection "['L6b']" \
+	--output_file $@
+
+fig_wnm_lf.pdf: fig_wnm_lf.py ../data/wnm/AxonRawReatureWide.csv ../data/wnm/fMOST_Complete_Axon_Features.csv ../data/wnm/LocalAxonHistogramLoadings.csv ../derived_data/sp_rrr_full_morph_latent_factors.csv $(WNM_META_FILE) $(LAYER_DEPTHS_FILE) ../derived_data/sparse_rrr_fits_with_selected_hyperparams_nodiam.h5 ../derived_data/features_for_sp_rrr.json $(FLATMAP_BUTTERFLY_ATLAS_FILE) $(ATLAS_LABELS_FILE) ../derived_data/L23-IT_flat_morphs.h5 ../derived_data/L6b_flat_morphs.h5
+	python $< \
+	--full_swc_dir $(WNM_LAYER_ALIGNED_SWC_DIR) \
+	--ccf_swc_dir $(CCF_SWC_DIR) \
+	--local_axon_feature_file ../data/wnm/AxonRawReatureWide.csv \
+	--complete_axon_feature_file ../data/wnm/fMOST_Complete_Axon_Features.csv \
+	--axon_pc_weight_file ../data/wnm/LocalAxonHistogramLoadings.csv \
+	--full_morph_lf_file ../derived_data/sp_rrr_full_morph_latent_factors.csv \
+	--full_morph_meta_file $(WNM_META_FILE) \
+	--layer_depths_file $(LAYER_DEPTHS_FILE) \
+	--srrr_fits_no_diam_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams_nodiam.h5 \
+	--srrr_features_file ../derived_data/features_for_sp_rrr.json \
+	--projected_atlas_file $(FLATMAP_BUTTERFLY_ATLAS_FILE) \
+	--atlas_labels_file $(ATLAS_LABELS_FILE) \
+	--l23_flat_morph_file ../derived_data/L23-IT_flat_morphs.h5 \
+	--l6b_flat_morph_file ../derived_data/L6b_flat_morphs.h5 \
+	--neuroglancer_pngs_dir ./neuroglancer_pngs \
+	--output_file $@
+
+# --------- FIGURE 6 ------------
+
+../derived_data/glm_lf_results/%_coef.csv: ../scripts/glmnet_lf_fitting_subclass.R ../derived_data/data_for_glm_lf.csv
+	Rscript $< ../derived_data/data_for_glm_lf.csv ../derived_data/glm_lf_results/
+
+../derived_data/glm_lf_results/%_loo_results.csv: ../scripts/glm_lf_subclass_loo.R ../derived_data/data_for_glm_lf.csv
+	Rscript $< ../derived_data/data_for_glm_lf.csv ../derived_data/glm_lf_results/
+
+fig_glm_fits.pdf: fig_glm_fits.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_BUTTERFLY_ATLAS_FILE) $(ATLAS_LABELS_FILE) $(FLATMAP_BUTTERFLY_PROJ_FILE)
+	python $< \
+	--glm_results_dir ../derived_data/glm_lf_results \
+	--wnm_data_file ../derived_data/data_for_glm_lf.csv \
+	--projected_atlas_file $(FLATMAP_BUTTERFLY_ATLAS_FILE) \
+	--atlas_labels_file $(ATLAS_LABELS_FILE) \
+	--flatmap_file $(FLATMAP_BUTTERFLY_PROJ_FILE) \
+	--annot_file $(CCF_ANNOT_FILE) \
+	--output_file $@
+
+# --------- FIGURE 7 ------------
+
+../derived_data/L4-L5-IT_flat_morphs.h5: ../scripts/flatten_morphologies.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_BUTTERFLY_PROJ_FILE) $(SURFACE_PATHS_FILE) $(CLOSEST_SURFACE_VOXEL_FILE)
+	python $< \
+	--input_file ../derived_data/data_for_glm_lf.csv \
+	--projection_file $(FLATMAP_BUTTERFLY_PROJ_FILE) \
+	--surface_paths_file $(SURFACE_PATHS_FILE) \
+	--closest_surface_voxel_reference_file $(CLOSEST_SURFACE_VOXEL_FILE) \
+	--ccf_morph_dir $(CCF_SWC_DIR) \
+	--met_type_selection "['L4 IT','L4/L5 IT','L5 IT-1','L5 IT-2','L5 IT-3 Pld5']" \
+	--output_file $@
+
+../derived_data/L5-ET_flat_morphs.h5: ../scripts/flatten_morphologies.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_BUTTERFLY_PROJ_FILE) $(SURFACE_PATHS_FILE) $(CLOSEST_SURFACE_VOXEL_FILE)
+	python $< \
+	--input_file ../derived_data/data_for_glm_lf.csv \
+	--projection_file $(FLATMAP_BUTTERFLY_PROJ_FILE) \
+	--surface_paths_file $(SURFACE_PATHS_FILE) \
+	--closest_surface_voxel_reference_file $(CLOSEST_SURFACE_VOXEL_FILE) \
+	--ccf_morph_dir $(CCF_SWC_DIR) \
+	--met_type_selection "['L5 ET-1 Chrna6','L5 ET-2','L5 ET-3']" \
+	--output_file $@
+
+fig_glm_predictions.pdf: fig_glm_predictions.py ../derived_data/data_for_glm_lf.csv ../derived_data/inferred_met_types.csv $(MORPH_UNNORM_FILE) ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json $(FLATMAP_BUTTERFLY_ATLAS_FILE) $(ATLAS_LABELS_FILE) $(CCF_ANNOT_FILE)
+	python $< \
+	--glm_results_dir ../derived_data/glm_lf_results \
+	--wnm_data_file ../derived_data/data_for_glm_lf.csv \
+	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
+	--morph_file $(MORPH_UNNORM_FILE) \
+	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--sparse_rrr_feature_file ../derived_data/features_for_sp_rrr.json \
+	--projected_atlas_file $(FLATMAP_BUTTERFLY_ATLAS_FILE) \
+	--atlas_labels_file $(ATLAS_LABELS_FILE) \
+	--annot_file $(CCF_ANNOT_FILE) \
+	--l4l5it_flat_morph_file ../derived_data/L4-L5-IT_flat_morphs.h5 \
+	--l5et_flat_morph_file ../derived_data/L5-ET_flat_morphs.h5 \
+	--ccf_morph_dir $(CCF_SWC_DIR) \
+	--output_file $@
+
+# --------- ED FIGURE 2 ------------
+
+../derived_data/me_clustering/elmo_coclust_matrix.txt: ../scripts/input_json/exc_met_mouse_me_clustering.json $(EPHYS_SPCA_FILE) $(MORPH_NORM_FILE)
+	python -m drcme.bin.run_ephys_morph_clustering --input_json $< --log_level INFO
+
+../derived_data/me_clustering/refined_text_labels.csv: ../scripts/input_json/exc_met_mouse_me_clustering_refine.json ../derived_data/me_clustering/elmo_coclust_matrix.txt
+	python -m drcme.bin.run_refine_unstable_coclusters --input_json $< --log_level INFO
+
+../derived_data/spectral_coclust_results.json: ../scripts/spectral_coclustering_me_vs_ttype.py $(PS_TX_ANNO_FILE) ../derived_data/me_clustering/refined_text_labels.csv
+	python $< \
+	--tx_anno_file $(PS_TX_ANNO_FILE) \
+	--me_cluster_labels_file ../derived_data/me_clustering/refined_text_labels.csv \
+	--output_file $@
+
+../derived_data/subsample_me_assignments.csv: ../scripts/rf_subsample_me_assignments.py $(EPHYS_SPCA_FILE) $(MORPH_NORM_FILE) ../derived_data/me_clustering/refined_text_labels.csv
+	python $< \
+	--ephys_data_file $(EPHYS_SPCA_FILE) \
+	--morph_data_file $(MORPH_NORM_FILE) \
+	--cluster_labels_file ../derived_data/me_clustering/refined_text_labels.csv \
+	--assignments_file $@
+
+../derived_data/ref_all_exc_de_genes.csv: ../scripts/ref_tx_de_genes.R $(REF_TX_ANNO_FILE) $(REF_NORM_DAT)
+	Rscript $< $(REF_TX_ANNO_FILE) $(REF_NORM_DAT) $@
+
+../derived_data/met_corr_ephys.csv ../derived_data/met_corr_morph.csv ../derived_data/met_corr_genes.csv: ../scripts/calculate_cell_cell_correlations.py ../derived_data/me_clustering/refined_text_labels.csv $(EPHYS_SPCA_FILE) $(MORPH_NORM_FILE) ../derived_data/ref_all_exc_de_genes.csv $(PS_TX_DATA_FILE) $(PS_TX_ANNO_FILE)
+	python $< \
+	--me_labels_file ../derived_data/me_clustering/refined_text_labels.csv \
+	--ephys_data_file $(EPHYS_SPCA_FILE) \
+	--morph_data_file $(MORPH_NORM_FILE) \
+	--marker_gene_file ../derived_data/ref_all_exc_de_genes.csv \
+	--tx_data_file $(PS_TX_DATA_FILE) \
+	--tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ephys_corr_file ../derived_data/met_corr_ephys.csv \
+	--morph_corr_file ../derived_data/met_corr_morph.csv \
+	--genes_corr_file ../derived_data/met_corr_genes.csv
+
+../derived_data/exc_met_node_partitions.json ../derived_data/exc_met_cell_assignment_runs.csv: ../scripts/met_types_by_graph.py $(PS_TX_ANNO_FILE) ../derived_data/me_clustering/refined_text_labels.csv ../derived_data/subsample_me_assignments.csv $(PS_TX_MAPPING_FILE) ../data/dend_children.json ../derived_data/met_corr_ephys.csv ../derived_data/met_corr_morph.csv ../derived_data/met_corr_genes.csv
+	python $< \
+	--tx_anno_file $(PS_TX_ANNO_FILE) \
+	--cluster_labels_file ../derived_data/me_clustering/refined_text_labels.csv \
+	--subsample_assignments_file ../derived_data/subsample_me_assignments.csv \
+	--tx_mapping_file $(PS_TX_MAPPING_FILE) \
+	--dendrogram_file ../data/dend_children.json \
+	--ephys_corr_file ../derived_data/met_corr_ephys.csv \
+	--morph_corr_file ../derived_data/met_corr_morph.csv \
+	--genes_corr_file ../derived_data/met_corr_genes.csv \
+	--met_assignment_file  ../derived_data/exc_met_cell_assignment_runs.csv \
+	--met_node_partition_file ../derived_data/exc_met_node_partitions.json
+
+$(MET_ASSIGNMENTS_NUMERICAL_FILE): ../scripts/met_consensus_from_coclustering.py ../derived_data/exc_met_cell_assignment_runs.csv
+	python $< \
+	--met_type_runs_file ../derived_data/exc_met_cell_assignment_runs.csv \
+	--consensus_type_file $@
+
+$(MET_ASSIGNMENTS_FILE): ../scripts/met_assign_names.py $(MET_ASSIGNMENTS_NUMERICAL_FILE)
+	python $< \
+	--consensus_type_file $(MET_ASSIGNMENTS_NUMERICAL_FILE) \
+	--met_name_file $@
+
+fig_met_matrix_graph.pdf: fig_met_matrix_graph.py $(PS_TX_ANNO_FILE) $(REF_TX_ANNO_FILE) ../derived_data/me_clustering/refined_text_labels.csv ../derived_data/spectral_coclust_results.json ../derived_data/exc_met_node_partitions.json ../derived_data/exc_met_cell_assignments.csv ../derived_data/subsample_me_assignments.csv $(PS_TX_MAPPING_FILE) ../data/dend_children.json ../derived_data/met_corr_ephys.csv ../derived_data/met_corr_morph.csv ../derived_data/met_corr_genes.csv
+	python $< \
+	--tx_anno_file $(PS_TX_ANNO_FILE) \
+	--facs_anno_file $(REF_TX_ANNO_FILE) \
+	--me_cluster_labels_file ../derived_data/me_clustering/refined_text_labels.csv \
+	--spec_results_file ../derived_data/spectral_coclust_results.json \
+	--met_partition_file ../derived_data/exc_met_node_partitions.json \
+	--met_cell_assignments_file ../derived_data/exc_met_cell_assignments.csv \
+	--subsample_assignments_file ../derived_data/subsample_me_assignments.csv \
+	--tx_mapping_file $(PS_TX_MAPPING_FILE) \
+	--dendrogram_file ../data/dend_children.json \
+	--ephys_corr_file ../derived_data/met_corr_ephys.csv \
+	--morph_corr_file ../derived_data/met_corr_morph.csv \
+	--genes_corr_file ../derived_data/met_corr_genes.csv \
+	--output_file $@
+
+# --------- ED FIGURE 5 ------------
+
+fig_met_type_markers.pdf: fig_met_type_markers.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv
+	python $< \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ps_tx_data_file $(PS_TX_DATA_FILE) \
+	--inf_met_type_file ../derived_data/inferred_met_types.csv \
+	--output_file $@
+
+# --------- ED FIGURE 6 ------------
+
+../derived_data/exc_met_flatmap_coords.csv: ../scripts/flatmap_coordinates.py $(PS_TX_ANNO_FILE) ../data/patchseq/dataset_ids.txt $(FLATMAP_BUTTERFLY_PROJ_FILE) $(SURFACE_PATHS_FILE) $(CLOSEST_SURFACE_VOXEL_FILE) $(STREAMLINE_LAYER_THICKNESS_FILE) $(LAYER_DEPTHS_FILE) $(CCF_ANNOT_FILE)
+	python $< \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--specimen_id_file ../data/patchseq/dataset_ids.txt \
+	--projection_file $(FLATMAP_BUTTERFLY_PROJ_FILE) \
+	--surface_paths_file $(SURFACE_PATHS_FILE) \
+	--closest_surface_voxel_reference_file $(CLOSEST_SURFACE_VOXEL_FILE) \
+	--streamline_layer_thickness_file $(STREAMLINE_LAYER_THICKNESS_FILE) \
+	--layer_depths_file $(LAYER_DEPTHS_FILE) \
+	--atlas_file $(CCF_ANNOT_FILE) \
+	--output_file $@
+
+../derived_data/flatmap_dist_p_vals.csv: ../scripts/flatmap_dist_test.py ../derived_data/inferred_met_types.csv
+	python $< \
+	--inf_met_type_file ../derived_data/inferred_met_types.csv \
+	--ccf_flat_coords_file ../derived_data/exc_met_flatmap_coords.csv \
+	--output_file $@
+
+fig_met_flatmaps.pdf: fig_met_flatmaps.py ../derived_data/inferred_met_types.csv ../derived_data/exc_met_flatmap_coords.csv ../derived_data/flatmap_dist_p_vals.csv $(FLATMAP_BUTTERFLY_ATLAS_FILE)
+	python $< \
+	--inf_met_type_file ../derived_data/inferred_met_types.csv \
+	--ccf_flat_coords_file ../derived_data/exc_met_flatmap_coords.csv \
+	--dist_pval_file ../derived_data/flatmap_dist_p_vals.csv \
+	--projected_atlas_file $(FLATMAP_BUTTERFLY_ATLAS_FILE) \
+	--atlas_labels_file $(ATLAS_LABELS_FILE) \
+	--output_file $@
+
+# --------- ED FIGURE 7 ------------
+
+../derived_data/me_cell_subthresh_info.json: ../scripts/subthresh_features.py ../data/patchseq/dataset_ids.txt
+	python $< \
+	--input_file ../data/patchseq/dataset_ids.txt \
+	--data_source lims-nwb2 \
+	--output_file $@
+
+fig_ephys_supplement_it.pdf: fig_ephys_supplement_it.py ../derived_data/inferred_met_types.csv $(EPHYS_FEATURE_FILE) ../derived_data/me_cell_ephys_sweep_info.json
+	python $< \
+	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
+	--ephys_features_file $(EPHYS_FEATURE_FILE) \
+	--ephys_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--subthresh_info_file ../derived_data/me_cell_subthresh_info.json \
+	--output_file $@
+
+# --------- ED FIGURE 13 ------------
+
+fig_ephys_supplement_nonit.pdf: fig_ephys_supplement_nonit.py fig_ephys_supplement_it.py ../derived_data/inferred_met_types.csv $(EPHYS_FEATURE_FILE) ../derived_data/me_cell_ephys_sweep_info.json
+	python $< \
+	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
+	--ephys_features_file $(EPHYS_FEATURE_FILE) \
+	--ephys_info_file ../derived_data/me_cell_ephys_sweep_info.json \
+	--subthresh_info_file ../derived_data/me_cell_subthresh_info.json \
+	--output_file $@
+
+
+# --------- ED FIGURE 15 ------------
+
+fig_srrr_methods.pdf: fig_srrr_methods.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass.json
+	python $< \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ps_tx_data_file $(PS_TX_DATA_FILE) \
+	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
+	--sparse_rrr_cv_fit_dir ../derived_data/sparse_rrr_results/ \
+	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--sparse_rrr_feature_file ../derived_data/features_for_sp_rrr.json \
+	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass.json \
+	--output_file $@
+
+
+# --------- ED FIGURE 16 ------------
+
+fig_additional_srrr_lf.pdf: fig_additional_srrr_lf.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass.json $(MORPH_UNNORM_FILE) $(EPHYS_SPCA_FILE) $(EPHYS_FEATURE_FILE) $(EPHYS_SPCA_INFO_FILE)
+	python $< \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ps_tx_data_file $(PS_TX_DATA_FILE) \
+	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
+	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--sparse_rrr_feature_file ../derived_data/features_for_sp_rrr.json \
+	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass.json \
+	--morph_file $(MORPH_UNNORM_FILE) \
+	--ephys_file $(EPHYS_SPCA_FILE) \
+	--ephys_features_file $(EPHYS_FEATURE_FILE) \
+	--spca_feature_info_file $(EPHYS_SPCA_INFO_FILE) \
+	--output_file $@
+
+
+# --------- ED FIGURE 17 ------------
+
+fig_tx_pcs_supplement.pdf: fig_tx_pcs_supplement.py $(REF_TX_ANNO_FILE) $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE)
+	python $< \
+	--ref_tx_anno_file $(REF_TX_ANNO_FILE) \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ps_tx_data_file $(PS_TX_DATA_FILE) \
+	--ref_tx_pc_dir ../derived_data/ref_tx_pca_results/ \
+	--output_file $@
+
+# --------- ED FIGURE 18 ------------
+
+fig_srrr_lf_vs_tx_pc.pdf: fig_srrr_lf_vs_tx_pc.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass.json
+	python $< \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ps_tx_data_file $(PS_TX_DATA_FILE) \
+	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
+	--tx_pc_dir ../derived_data/ps_tx_pca_results/ \
+	--sparse_rrr_cv_fit_dir ../derived_data/sparse_rrr_results/ \
+	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--sparse_rrr_feature_file ../derived_data/features_for_sp_rrr.json \
+	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass.json \
+	--output_file $@
+
+# --------- ED FIGURE 19 ------------
+
+../derived_data/exc_response_gene_pc_weights.csv ../derived_data/exc_response_gene_pc_means.csv ../derived_data/exc_response_gene_pcs.csv: ../scripts/ref_data_response_pca.py $(REF_TX_ANNO_FILE) $(REF_TX_DATA_FILE) $(RESPONSE_GENE_FILE)
+	python $< \
+	--ref_tx_anno_file $(REF_TX_ANNO_FILE) \
+	--ref_tx_data_file $(REF_TX_DATA_FILE) \
+	--resp_gene_file $(RESPONSE_GENE_FILE) \
+	--output_weights_file ../derived_data/exc_response_gene_pc_weights.csv \
+	--output_means_file ../derived_data/exc_response_gene_pc_means.csv \
+	--output_pca_file ../derived_data/exc_response_gene_pcs.csv
+
+../derived_data/ref_exc_umap_coordinates.csv: ../scripts/ref_exc_umap_coordinates.py $(REF_TX_ANNO_FILE) $(REF_TX_DATA_FILE) $(REF_SELECT_GENE_FILE) $(REF_QC_FILE)  ../derived_data/exc_response_gene_pcs.csv
+	python $< \
+	--ref_tx_anno_file $(REF_TX_ANNO_FILE) \
+	--ref_tx_data_file $(REF_TX_DATA_FILE) \
+	--select_genes_file $(REF_SELECT_GENE_FILE) \
+	--qc_file $(REF_QC_FILE) \
+	--resp_gene_pc_file ../derived_data/exc_response_gene_pcs.csv \
+	--output_file $@
+
+../derived_data/ps_dataset_subclass_labels.csv ../derived_data/ref_dataset_subclass_labels.csv: ../scripts/subclass_labels_for_sample_ids.py ../derived_data/inferred_met_types.csv $(PS_TX_ANNO_FILE)
+	python $< \
+	--inf_met_type_file ../derived_data/inferred_met_types.csv \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ref_tx_anno_file $(REF_TX_ANNO_FILE) \
+	--output_ps_file ../derived_data/ps_dataset_subclass_labels.csv \
+	--output_ref_file ../derived_data/ref_dataset_subclass_labels.csv
+
+../derived_data/response_gene_consistent_lfc.csv: ../scripts/ps_ref_resp_de.R $(RESPONSE_GENE_FILE) $(REF_TX_DATA_FILE) $(PS_TX_DATA_FILE) ../derived_data/ref_dataset_subclass_labels.csv ../derived_data/ps_dataset_subclass_labels.csv
+	Rscript $< $(RESPONSE_GENE_FILE) $(REF_TX_DATA_FILE) $(PS_TX_DATA_FILE) ../derived_data/ref_dataset_subclass_labels.csv ../derived_data/ps_dataset_subclass_labels.csv $@
+
+fig_resp_gene.pdf: fig_resp_gene.py $(REF_TX_ANNO_FILE) $(REF_TX_DATA_FILE) $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/ref_exc_umap_coordinates.csv ../derived_data/tx_umap_coordinates_patchseq_facs_co-embedded.csv ../derived_data/exc_response_gene_pc_weights.csv ../derived_data/exc_response_gene_pc_means.csv ../derived_data/inferred_met_types.csv  ../derived_data/response_gene_consistent_lfc.csv $(RECLUSTER_FILE)
+	python $< \
+	--ref_tx_anno_file $(REF_TX_ANNO_FILE) \
+	--ref_tx_data_file $(REF_TX_DATA_FILE) \
+	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
+	--ps_tx_data_file $(PS_TX_DATA_FILE) \
+	--resp_umap_file ../derived_data/ref_exc_umap_coordinates.csv \
+	--common_umap_file ../derived_data/tx_umap_coordinates_patchseq_facs_co-embedded.csv \
+	--resp_pc_weight_file ../derived_data/exc_response_gene_pc_weights.csv \
+	--resp_pc_means_file ../derived_data/exc_response_gene_pc_means.csv \
+	--inf_met_type_file ../derived_data/inferred_met_types.csv \
+	--ref_pc_dir ../derived_data/ref_tx_pca_results/ \
+	--ps_transformed_pc_dir ../derived_data/ps_tx_pca_results/ \
+	--lfc_file ../derived_data/response_gene_consistent_lfc.csv \
+	--recluster_file $(RECLUSTER_FILE) \
+	--output_file $@
+
+# --------- ED FIGURE 20 ------------
+
+fig_glm_fits_supplement.pdf: fig_glm_fits_supplement.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_BUTTERFLY_ATLAS_FILE) $(ATLAS_LABELS_FILE) $(FLATMAP_BUTTERFLY_PROJ_FILE) $(CCF_ANNOT_FILE)
+	python $< \
+	--glm_results_dir ../derived_data/glm_lf_results \
+	--wnm_data_file ../derived_data/data_for_glm_lf.csv \
+	--projected_atlas_file $(FLATMAP_BUTTERFLY_ATLAS_FILE) \
+	--atlas_labels_file $(ATLAS_LABELS_FILE) \
+	--flatmap_file $(FLATMAP_BUTTERFLY_PROJ_FILE) \
+	--annot_file $(CCF_ANNOT_FILE) \
+	--output_file $@
+
+
+# -------- CLEAN UP -------------
+
+clean:
+	rm -f *.pdf

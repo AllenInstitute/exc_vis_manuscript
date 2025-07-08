@@ -1,0 +1,9 @@
+Gene switches
+
+Lrrc33 -> Nrros
+Odz1 -> Tenm1
+Odz2 -> Tenm2
+Odz3 -> Tenm3
+Odz4 -> Tenm4
+
+Vamp7 -> removed (not present)

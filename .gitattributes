@@ -1,0 +1,16 @@
+/data/kim_et_al_2020/GSE133230_logCPM_945filtered_cells.csv filter=lfs diff=lfs merge=lfs -text
+/derived_data/L23-IT_flat_morphs.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/L4-L5-IT_flat_morphs.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/L5-ET_flat_morphs.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/L6b_flat_morphs.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/l6b_subthresh_traces.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/single_feature_fits/single_features_elasticnet_cv_L23-IT.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/single_feature_fits/single_features_elasticnet_cv_L4-L5-IT.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/single_feature_fits/single_features_elasticnet_cv_L5-ET-Chrna6.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/single_feature_fits/single_features_elasticnet_cv_L5-ET-non-Chrna6.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/single_feature_fits/single_features_elasticnet_cv_L5-ET.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/single_feature_fits/single_features_elasticnet_cv_L5-NP.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/single_feature_fits/single_features_elasticnet_cv_L5L6-IT-Car3.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/single_feature_fits/single_features_elasticnet_cv_L6-CT.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/single_feature_fits/single_features_elasticnet_cv_L6-IT.h5 filter=lfs diff=lfs merge=lfs -text
+/derived_data/single_feature_fits/single_features_elasticnet_cv_L6b.h5 filter=lfs diff=lfs merge=lfs -text

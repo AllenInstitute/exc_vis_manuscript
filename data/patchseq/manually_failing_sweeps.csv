@@ -1,0 +1,60 @@
+﻿specimen_id,sweep_number,reason
+961846146,21,large transient
+637414095,34,highly unstable
+637414095,35,highly unstable
+645934635,4,highly unstable
+645436172,14,input resistance dropped
+645436172,15,input resistance dropped
+645436172,16,input resistance dropped
+645436172,17,input resistance dropped
+645436172,18,input resistance dropped
+645436172,19,input resistance dropped
+645436172,20,input resistance dropped
+645436172,21,input resistance dropped
+645436172,22,input resistance dropped
+645436172,23,input resistance dropped
+645436172,24,input resistance dropped
+645436172,25,input resistance dropped
+645436172,26,input resistance dropped
+679471718,28,input resistance dropped
+679471718,29,input resistance dropped
+679471718,30,input resistance dropped
+679471718,31,input resistance dropped
+679471718,32,input resistance dropped
+882275192,5,raccess too high
+882275192,6,raccess too high
+882275192,7,raccess too high
+882275192,8,raccess too high
+882275192,9,raccess too high
+882275192,15,raccess too high
+882275192,16,raccess too high
+882275192,17,raccess too high
+882275192,18,raccess too high
+882275192,19,raccess too high
+882275192,29,raccess too high
+882275192,30,raccess too high
+882275192,31,raccess too high
+882275192,32,raccess too high
+882275192,33,raccess too high
+956476417,44,input resistance dropped
+956476417,45,input resistance dropped
+956476417,46,input resistance dropped
+956476417,47,input resistance dropped
+956476417,48,input resistance dropped
+956476417,49,input resistance dropped
+987215803,4,raccess too high
+987215803,5,raccess too high
+987215803,6,raccess too high
+987215803,7,raccess too high
+987215803,8,raccess too high
+987215803,9,raccess too high
+987215803,15,raccess too high
+987215803,16,raccess too high
+987215803,17,raccess too high
+987215803,18,raccess too high
+987215803,19,raccess too high
+987215803,20,raccess too high
+987215803,38,raccess too high
+987215803,39,raccess too high
+899424012,5,sudden depolarization
+826840735,15,psps interfering with time constant measurement

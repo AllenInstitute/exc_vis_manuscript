@@ -1,0 +1,10 @@
+{
+  "cocluster_matrix_file": "../derived_data/me_clustering/elmo_coclust_matrix.txt",
+  "jaccards_file": "../derived_data/me_clustering/elmo_jaccards.txt",
+  "cluster_labels_file": "../derived_data/me_clustering/elmo_clust_labels.csv",
+  "refined_labels_file": "../derived_data/me_clustering/refined_labels.csv",
+  "refined_text_labels_file": "../derived_data/me_clustering/refined_text_labels.csv",
+  "refined_ordering_file": "../derived_data/me_clustering/refined_ordering.txt",
+  "me_prefix": "exc_mMET_ME",
+  "coclust_threshold": 1.0
+}
