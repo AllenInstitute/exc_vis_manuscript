@@ -91,6 +91,19 @@ fig_met_summary.pdf: fig_met_summary.py ../derived_data/rep_met_cells_from_dist.
 	--met_ephys_info_file ../derived_data/me_cell_ephys_sweep_info.json \
 	--output_file $@
 
+# --------- RIVER PLOT + DEPTH VIOLINS -----------
+# Patch-seq ttype-met type river plot aligned with soma depth violins for Patch-seq and Whole Neuron Morphology cells
+fig_river_soma_depth_violins.pdf : fig_patchseq_sankey_and_soma_depths.py $(MORPH_UNNORM_FILE) ../derived_data/exc_met_flatmap_coords.csv $(MET_ASSIGNMENTS_FILE) ../data/patchseq/dataset_ids.txt $(PS_TX_ANNO_FILE) ../data/wnm/RawFeaturesWide_ChamferCorr.csv $(WNM_META_FILE) $(LAYER_DEPTHS_FILE)
+	python $< \
+	--ps_features_file $(MORPH_UNNORM_FILE) \
+	--ps_flatmap_coords_file ../derived_data/exc_met_flatmap_coords.csv \
+	--ps_met_types_file $(MET_ASSIGNMENTS_FILE) \
+	--ps_specimens_file ../data/patchseq/dataset_ids.txt \
+	--ps_anno_file $(PS_TX_ANNO_FILE) \
+	--wnm_features_file ../data/wnm/RawFeaturesWide_ChamferCorr.csv \
+	--wnm_met_types_file $(WNM_META_FILE) \
+	--layer_depths_file $(LAYER_DEPTHS_FILE) \
+	--output_file $@
 
 # --------- RIVER PLOTS (FIGS 1, 2, 3) ------------
 
