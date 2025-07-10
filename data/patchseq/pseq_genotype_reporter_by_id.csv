@@ -1,0 +1,1529 @@
+Cell ID,Genotype,Reporter,MET-type,Morphology (manual),Morphology (auto)
+823231829,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+893406540,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+896877084,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+922597220,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+740373591,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+716853260,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+973383317,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+889271408,Ndnf-IRES2-dgCre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+912275105,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+912918179,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+926866005,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+935046071,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+936001075,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+953065561,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+924610453,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+992441737,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+994015825,Sncg-IRES2-FlpO-neo/wt;Ai65F/wt,tdt-,L2/3 IT,False,False
+915479566,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+649505836,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+912301547,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+912953077,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,False,False
+947344218,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+912256459,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+912889454,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+925242241,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+954066469,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+915442497,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+912608626,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,False,False
+914250737,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,False,False
+705839974,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+824923819,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+824937690,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+895740736,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+986109363,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,False,False
+986279166,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,False,True
+717089521,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+963190732,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,False,False
+693269523,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+705302304,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+869616485,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,False,False
+895609799,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+963019667,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+867765313,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,False,False
+898881170,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+922613228,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+962821095,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,True,False
+963063283,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+986231328,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,False,False
+824909637,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+816462408,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,False,False
+952669499,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+919085315,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+709442586,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+962355052,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,True,False
+912868696,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+920542161,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,False,False
+947496055,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+950034792,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+904862358,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+717113701,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+962261526,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,True,False
+994042809,Sncg-IRES2-FlpO-neo/wt;Ai65F/wt,tdt-,L2/3 IT,False,False
+919699890,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+717313398,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+792687812,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+949987663,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+950027726,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,True
+951495679,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+954223042,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,True
+956126263,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+956476417,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+639910703,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+640109906,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+640285026,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+672645198,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+679211312,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+643798256,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+643808289,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+672644038,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+680969310,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,True
+735258437,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+824990654,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+825002523,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+849679419,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+889568825,Chat-IRES-Cre-neo/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+896871575,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,True
+962038938,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+976985059,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+638211495,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+638223032,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+638228854,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+639881020,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+640088868,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+679647266,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+717079828,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+638322521,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+638988062,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+642753179,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+643501648,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+643825527,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+880889599,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+891594369,Ndnf-IRES2-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+896860760,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+954164743,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+956134345,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+639910566,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+643508561,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+716784611,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+762706824,Cck-IRES-Cre/wt;Vip-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L4 IT,False,False
+778255191,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+849675474,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+948126701,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,True,False
+950081436,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,True
+799967729,Sst-IRES-Cre/wt;Ai167(TIT2L-ChrimsonR-tdT-ICL-tTA2)/wt,tdt-,L4 IT,False,False
+640111874,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+950093160,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+640314301,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+882759763,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+948429967,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+951581517,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+645144344,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+948168600,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,True
+679511332,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,True
+643511500,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,True
+680973517,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+954148478,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+640109779,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+640106757,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+645530172,Tlx3-Cre_PL56/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+628802839,Scnn1a-Tg2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+680954928,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+848303383,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+907170627,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+947975387,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,True
+604527243,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+681554845,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+628561242,Scnn1a-Tg2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+646101314,Tlx3-Cre_PL56/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+679183249,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+679557513,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+731877507,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+764497776,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+929542471,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+940686616,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+992402475,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+652789704,Cux2-CreERT2/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+679010561,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+901424290,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,True,False
+643003647,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+743027332,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+989501392,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+847870428,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+628633713,Scnn1a-Tg2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+764033223,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+716596648,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+992760205,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+693261769,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+628756464,Scnn1a-Tg2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+637385119,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+645518718,Tlx3-Cre_PL56/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+681937682,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+764477652,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+940759275,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+901160774,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+992738956,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+764495103,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+825365347,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+882795087,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+825354223,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+764500477,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+990342596,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+952662618,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+644857353,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+612402470,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+645443849,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+652958648,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+849668601,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+965626099,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+909586358,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+945848661,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+645354028,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+645608113,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+813005184,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+645453746,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+901103472,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+652959315,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+907155359,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+818818876,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+735205632,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+898946846,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+711564509,Nos1-CreERT2/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+940798014,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+825389194,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+693274467,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+951722517,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+694745882,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+908721187,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+992219189,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+681939807,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+825436260,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+642790804,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+623331789,Scnn1a-Tg2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+645449397,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+948344824,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+1000153691,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+820149803,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+963345172,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L4/L5 IT,False,False
+645551825,Tlx3-Cre_PL56/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+907296441,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+648093076,Scnn1a-Tg2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+644858243,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+603337985,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+853901772,Chrna2-Cre_OE25/wt;Pvalb-T2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L4/L5 IT,False,False
+940649852,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+679185666,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+841871826,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+651041745,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+819950000,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+982757189,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+906510693,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,True
+945833568,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,True,False
+947109100,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+645635525,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+656948675,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+679471718,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+711573106,Nos1-CreERT2/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+638806925,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,True,False
+643506594,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+644482280,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+644864693,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,True,False
+673583983,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+694830305,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+902255361,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,True,False
+912903080,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,True
+947189559,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+956141669,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,False
+963220125,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 IT-1,False,False
+986186887,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 IT-1,False,False
+652175435,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+656947791,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+673387671,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,True,False
+812999794,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+824641983,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+898658234,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,False
+907133224,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+966795074,Nos1-CreERT2/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 IT-1,False,False
+982724976,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+992408868,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,True,False
+643541667,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+673643261,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,True,False
+830652329,Batf3-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 IT-1,False,False
+845540533,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,False
+906587880,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+947286448,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,True
+901395424,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,False
+986275230,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 IT-1,False,False
+992394456,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+992390889,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+603902877,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+657192687,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+743115891,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+882839228,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,True
+969964106,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,False
+986231454,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 IT-1,False,False
+819747729,Sst-IRES-Cre/wt;Ai167(TIT2L-ChrimsonR-tdT-ICL-tTA2)/wt,tdt+,L5 IT-1,False,False
+990350690,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+639827216,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,True,False
+969959114,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,False
+834161225,Batf3-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 IT-1,False,False
+906532711,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-2,True,False
+645834123,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-2,True,False
+893401406,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-2,True,False
+913765840,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-2,True,False
+850968263,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-2,True,False
+899452696,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-2,True,False
+899502033,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-2,False,False
+679270434,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-2,False,False
+694841940,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-2,True,False
+645529777,Tlx3-Cre_PL56/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-3 Pld5,True,False
+919784692,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-3 Pld5,False,False
+957296740,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-3 Pld5,False,False
+957337542,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-3 Pld5,False,False
+966819173,Nos1-CreERT2/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 IT-3 Pld5,True,False
+971586225,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-2,True,False
+971647853,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-3 Pld5,True,False
+898701038,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-3 Pld5,False,False
+957039327,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-3 Pld5,False,False
+961238333,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-3 Pld5,True,False
+895548208,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-2,True,False
+972419157,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+1000741385,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+701075085,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+970683578,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-2,True,False
+971607823,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-2,False,True
+891558275,Ndnf-IRES2-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+916490671,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-3,True,False
+917657507,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-3,True,False
+948366592,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+962105846,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+963009885,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+971708843,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-1,True,False
+847887193,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+919109645,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+965535967,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+972461174,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+882733530,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+990590730,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+898929277,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+963322913,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,,False,False
+895557666,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+964931038,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,False,True
+794963377,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+919979790,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+697506892,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+901093205,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+646836355,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-3,True,False
+907465109,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+636784746,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+697521266,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+896053888,Crh-IRES-Cre_ZJH/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 IT-2,True,False
+889648857,Chat-IRES-Cre-neo/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+972549288,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+717076419,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+915572484,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+742023028,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+911964754,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+882198617,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+913773906,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+698700813,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+900985661,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+910864371,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+934725928,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+963267074,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,,False,False
+965574215,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,False,True
+640002660,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+648115263,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+820095539,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+880817724,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+882458442,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+896619350,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-1,True,False
+896897092,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+901060224,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-2,False,True
+906568427,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+912085494,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+912329296,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+913794676,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+921637459,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+950363664,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,False,True
+966772916,Nos1-CreERT2/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 IT-2,False,True
+990240020,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+990331949,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+992441763,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+645934635,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+742014521,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+742019567,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+908675487,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+917588572,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+921574909,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+947139142,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+990606480,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+1055268377,Vipr2-IRES2-Cre/wt;Slc32a1-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,,False,False
+763994181,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+841873725,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+899424012,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-1,True,False
+901334338,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+904059133,Chrna2-Cre_OE25/wt;Pvalb-T2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 IT-2,False,True
+915441937,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+922679209,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+926754976,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+948318130,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+964894772,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+965577581,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+965605105,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+966819294,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+992009934,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+1038771988,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+644832461,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+743754524,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+742940722,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+965542873,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+644920260,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+989409283,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+697538916,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+990538130,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+893366298,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+977013731,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+907191349,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+899505310,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+992769223,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+912571573,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+1000742412,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+989502887,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+1000110992,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+1000125506,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+1054106864,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+1054139238,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,True
+914275457,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5/L6 IT Car3,False,False
+973792505,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+989164849,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+989479628,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+1044355522,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+1054721489,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+973832650,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+975392497,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+975477315,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+1000131771,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+1000612469,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+1000625161,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+973771485,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+975325599,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,True,False
+1000756535,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+1054146046,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+950265290,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-1 Chrna6,True,False
+951537534,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,False,False
+828886063,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,False
+829302487,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,False
+829318500,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,False
+896110766,Crh-IRES-Cre_ZJH/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-1 Chrna6,False,True
+898529637,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,False,False
+901151599,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,False,True
+902278249,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,False,False
+973384481,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,True,False
+989163765,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,True,False
+645834778,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-1 Chrna6,True,False
+826765287,Chrna6-IRES2-FlpO-WPRE-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,True,False
+826782115,Chrna6-IRES2-FlpO-WPRE-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,False
+827638657,Chrna6-IRES2-FlpO-WPRE-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,True,False
+827772373,Chrna6-IRES2-FlpO-WPRE-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,False
+828879764,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,True
+702023186,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,None,L5 ET-1 Chrna6,True,False
+826830025,Chrna6-IRES2-FlpO-WPRE-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,True,False
+827595695,Chrna6-IRES2-FlpO-WPRE-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,True
+827655895,Chrna6-IRES2-FlpO-WPRE-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,True
+828842878,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,False
+828879817,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,True
+828894369,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,True,False
+829296573,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,True,False
+829305793,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,True,False
+845555925,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,False,False
+963325924,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-1 Chrna6,False,False
+826750185,Chrna6-IRES2-FlpO-WPRE-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,False
+826780116,Chrna6-IRES2-FlpO-WPRE-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,True,False
+828880827,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,False
+828885535,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,True,False
+829298408,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,True,False
+829305835,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-1 Chrna6,False,True
+939633886,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-1 Chrna6,False,False
+951720102,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-1 Chrna6,False,True
+992406414,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-1 Chrna6,False,False
+1040463370,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-1 Chrna6,False,False
+1044635068,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,False,False
+913716620,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,True,False
+603229579,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+644548713,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+645451268,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+695424422,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+929527191,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+645955689,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+642999751,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+645373650,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+645443249,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+826798072,Chrna6-IRES2-FlpO-WPRE-neo/wt;Ai65F/wt,tdt+,L5 ET-3,False,False
+906545713,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+827944175,Ai65F/wt,tdt+,L5 ET-2,False,False
+828890584,Chrna6-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L5 ET-2,True,False
+899462020,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,True
+975429194,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+853892758,Chrna2-Cre_OE25/wt;Pvalb-T2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L5 ET-2,False,False
+970723621,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+652544407,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+895580896,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,True,False
+995575732,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+880871943,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+895740352,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,True,False
+826909667,Ai65F/wt,tdt+,L5 ET-3,False,False
+681912683,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+987121219,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+907087713,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+652960852,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+841875079,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+926803573,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+947363567,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+948376025,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+898553217,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+901403196,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+908669318,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+990219668,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+990231113,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+681636493,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+818825921,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+880784944,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+880847320,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+898949412,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+904050612,Chrna2-Cre_OE25/wt;Pvalb-T2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-3,False,True
+906597203,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+898947776,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+906581896,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+908688687,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+937854542,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+945758130,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+950300190,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+965821175,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-3,False,True
+992195946,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+992205711,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+992219017,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+992769264,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+880772136,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+826842508,Ai65F/wt,tdt+,L5 ET-3,False,False
+940783281,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+990238702,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+637383404,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+902266075,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+799954058,Sst-IRES-Cre/wt;Ai167(TIT2L-ChrimsonR-tdT-ICL-tTA2)/wt,tdt-,L5 ET-3,False,False
+603511210,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+865208579,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+907125584,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+908543551,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+944750626,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+992393816,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+644836206,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+742734652,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+823024502,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+899674024,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+950255593,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+970085557,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+992396042,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+866083691,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+901346711,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+908537533,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+914389834,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+965113010,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-3,False,False
+971561834,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+983472272,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+827969748,Ai65F/wt,tdt+,L5 ET-3,False,False
+899683133,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+973501446,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+1034751127,Tac1-IRES2-Cre/wt;Vip-IRES-FlpO/wt;Ai193(TICL-EGFP-ICF-tdT)-hyg/wt,tdt+,L5 ET-3,False,False
+867207304,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+915642833,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+916699724,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+965771919,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+991953962,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+865311811,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+880777888,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+898671597,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+945768358,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+901376365,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+908602736,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+992227058,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+975408498,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+895593803,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+991978907,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+998064533,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,True,False
+899673509,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+916681208,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+823220235,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+965057941,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+978676960,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+898598276,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+916624146,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+915757680,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+989477803,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+960656026,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+841889888,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+867099146,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+989460363,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+901369771,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+681405248,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+743134436,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+908649467,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+880875384,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+994882296,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+895833764,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+820945099,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+880853797,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+898667347,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+908615401,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+940583276,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+965088550,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+965744709,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+637394306,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+643002356,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+645447975,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+645913812,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+716591562,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+642993450,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+645442972,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+833872706,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+841866603,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+845402780,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,True,False
+896044181,Crh-IRES-Cre_ZJH/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-2,False,True
+904876570,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,False
+926842115,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,True
+929535184,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+948321114,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+957039728,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+975477551,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,False
+813003041,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+827873742,Ai65F/wt,tdt+,L5 ET-3,True,False
+882440699,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+882829701,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+896126139,Crh-IRES-Cre_ZJH/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-2,False,True
+897009330,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+972483962,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+978147006,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+989464819,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+642999662,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+841866643,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+978149378,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+978159020,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+982703343,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+990531168,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+914354735,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+914399613,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+945063428,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+948302732,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+963308801,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L5 ET-3,False,False
+965861424,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-3,False,False
+972563450,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+984092499,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+992774965,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+952581459,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,False
+908639803,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+899513194,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+951700309,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+828009310,Ai65F/wt,tdt+,L5 ET-3,False,False
+947340690,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,False
+867147516,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+898670093,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+992400811,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+948360440,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+951729703,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+645449840,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+681400617,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+973846017,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+644827374,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+908628525,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+841888315,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+898676236,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+945796367,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+973472798,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+989134063,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+896692280,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+796858996,Ndnf-IRES2-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+1055390869,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+646177634,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+698668188,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+970080520,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+698237160,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+698658322,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+698676093,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+698675821,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+701074357,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+712145820,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+958619600,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+959190247,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+961096044,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,True
+961104301,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+961109466,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,True
+961118012,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+961226203,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+961238285,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+961242231,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+1041329016,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+1055393423,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+645379626,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+696958105,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+701074400,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+645902724,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+1040452915,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+712153315,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+899512791,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 NP,False,True
+983936858,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+958953064,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+961114647,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+961131679,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,True
+961241673,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+1043798071,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,False,False
+961230415,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 NP,True,False
+888338468,Calb2-IRES-Cre/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 CT-2,False,False
+903831367,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+904023215,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+904690163,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+967385130,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+716309237,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+985869192,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+665201523,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+730820711,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+961846146,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+732003615,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+863465258,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+902369477,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+903853784,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+847898754,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+863460740,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,True
+864004996,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+910432073,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-2,False,False
+912573042,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-2,False,False
+912686733,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-2,False,False
+914250949,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-2,True,False
+863478540,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+914234018,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-2,False,False
+910287886,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-2,True,False
+821606754,Ndnf-IRES2-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+850969484,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+851650794,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+646854566,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+867244389,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+902000094,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+908855729,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+941719587,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+1044021521,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904731534,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+912063608,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,True,False
+904943101,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+736491141,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+653195521,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+902340506,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+927575762,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+811374333,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+853618984,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+907357811,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+966690589,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904943158,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+883688278,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904945911,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+932678629,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+863404974,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+901975435,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+904601405,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+853471899,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+863993115,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904625947,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+904808278,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904918317,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+907389002,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+916537758,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+942395372,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+724539260,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+834094967,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+843414426,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+904108338,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904659932,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+929491574,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+935214823,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+884801248,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+902112940,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+903842638,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+907385405,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+935203809,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+937706533,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+941635300,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+942307202,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+985868742,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+990527437,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+853713858,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+863535837,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904709898,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+932730547,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+863440707,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+972492789,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+764498318,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+907336873,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+965795941,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 CT-1,False,False
+904819001,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+985832380,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+902029302,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+927797864,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+902323416,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+971575743,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+913701146,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+910354863,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+966592282,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+653196313,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+647401222,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+863418322,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+972489317,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+910892791,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+902297243,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+941552661,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+932678695,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+906706222,Calb2-IRES-Cre/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 CT-1,False,False
+908894436,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+926930912,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+834055407,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+834088038,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+831254527,Ctxn3-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L6 CT-1,True,False
+863431930,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+902105412,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+902043499,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+903807880,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+882752472,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+886474771,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+903864968,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+834071129,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+898558730,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+920016093,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+927810884,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+907460164,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,True,False
+906739413,Calb2-IRES-Cre/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 CT-1,False,False
+904725260,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+907417958,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+902284440,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+910287738,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,True,False
+914230662,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,True
+903814839,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+966610848,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904626210,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+904948028,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+912117029,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+834060016,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+908894026,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+908858797,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+902380826,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+907485112,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,True
+903951413,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+811387807,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+967338509,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+849667636,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+834908547,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+920615063,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+929406559,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+929406809,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+965771797,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 CT-2,True,False
+864030679,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+913837549,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-2,False,False
+907337101,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-2,True,False
+831195067,Gpr139-IRES2-FlpO-WPRE-neo/wt;Ai65F/Ai65F,tdt+,L6 CT-2,False,False
+742717602,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+1010970495,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+978652582,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1035105719,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+989382305,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1036061965,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+907353172,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1006181229,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+984034203,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1010687072,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+970079895,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+977029946,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1039273993,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1034933710,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1039862978,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+893354404,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+982582806,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+983928133,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1036070294,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+701075123,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1006178551,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1035989877,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1036055775,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,True
+1039564816,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+764497316,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+984104403,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1036259470,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+912340803,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+914265453,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6b,True,False
+914432180,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6b,True,False
+982658324,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1035458483,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1038805463,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+610440978,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+978677202,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1010976652,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+650331035,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1010665186,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1036070797,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+650346437,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+989393925,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1006384552,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1010996263,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+929962825,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1010692386,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+978669806,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+863483123,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1010965806,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1039550499,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+978607419,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+978138552,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1006389773,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+610400799,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+839584863,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+970090146,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+989351643,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1010970692,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+984104151,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1036043483,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1039503078,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+983850521,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1006163964,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1036212166,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,True
+1010978844,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1010989582,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1043809804,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1006380866,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+988957754,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+983975050,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1010677295,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+717094565,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+988945595,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1035970888,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1034926679,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1034933680,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+733620016,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+982558622,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+982589904,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+970084701,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+984004103,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+716853454,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904941454,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904955725,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+935194956,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+646553705,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+728498232,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+834039060,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+851700690,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+891469307,Ndnf-IRES2-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+767362340,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+912589594,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+763943332,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+811341605,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+811375643,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+902140767,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+902352680,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904886485,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,True
+912322706,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+937732972,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+902067954,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+902349213,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+864012426,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+834891776,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+834083607,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+646828468,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+987063752,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+920826071,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+927927945,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904893806,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+920594987,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+966658997,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+882711263,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+902158010,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904942307,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+941579967,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+907432789,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+908644527,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+915690724,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+951696740,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+993993470,Sncg-IRES2-FlpO-neo/wt;Ai65F/wt,tdt-,L5 ET-3,False,False
+742521771,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+742538397,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+898485751,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+908682883,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+926761275,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,True
+947396671,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+957104091,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+990236615,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+994889056,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+681897314,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+912589058,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,False
+947162577,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+973388326,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+990282326,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+995574011,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+950322658,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+972517935,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+978652336,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+742596680,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+951683418,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+957120771,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+965719385,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+973374623,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+989467159,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+991968323,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+647764362,Nkx2-1-CreERT2/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+982745652,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+901433799,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+695440507,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+915788289,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+972461300,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+972560174,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+901086894,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-1,False,True
+921710929,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+962004183,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+990548306,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+740410280,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-3,True,False
+908948756,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+837673842,Calb1-IRES2-Cre-neo/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+884596365,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+969238479,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+972537876,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+645451222,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+935795108,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+741213831,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+963093741,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+922562221,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+915515705,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+661513942,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+896701648,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+841882659,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+740318831,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+922742835,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+908565354,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+939652621,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+947183968,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+962280275,Crh-IRES-Cre_ZJH/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L4/L5 IT,False,False
+642763833,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+645453779,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+637380781,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+637414095,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+764494187,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+940668952,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+982741319,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+652959487,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+679471957,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+645814831,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+743122822,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+824978806,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+882256858,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+952786723,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+990599451,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+656714583,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+963306220,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L4/L5 IT,False,True
+893381309,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+984027717,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,True
+986895113,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1034908713,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+926555099,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L6b,False,False
+850983752,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+737997401,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+954032889,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+927833265,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+867650384,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,True,False
+999853927,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,False,True
+678661149,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+965591192,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-3,True,False
+972443999,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,False,True
+636835010,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+639996724,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+929547484,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-2,False,True
+972447764,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,False,True
+987168573,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-2,False,True
+990340884,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+697525735,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+716793760,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-3,True,False
+893433491,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+896931841,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,False,True
+910335214,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-3,False,True
+912896677,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-3,False,True
+918928552,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+921759520,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+990342517,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+990348610,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+741865175,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+765881445,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+867765823,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,,False,False
+913774081,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+990594834,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+882770947,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+916627946,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-3,False,True
+966873774,Nos1-CreERT2/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 IT-2,False,True
+820060969,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+969200089,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+880774141,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+926894447,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+948360577,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+830435948,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+970073623,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+823083861,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+901412692,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+906552358,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+912767246,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+992396717,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+1034747172,Tac1-IRES2-Cre/wt;Vip-IRES-FlpO/wt;Ai193(TICL-EGFP-ICF-tdT)-hyg/wt,tdt+,L5 ET-3,False,True
+826837153,Ai65F/wt,tdt+,L5 ET-3,False,False
+940635765,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+994718096,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+827882326,Ai65F/wt,tdt+,L5 ET-3,False,True
+866049737,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+915675559,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+644821657,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+796802673,Ndnf-IRES2-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+907388787,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+644953743,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+927532600,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+646827381,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+964999658,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+841817193,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+851692805,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+902021902,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+847876759,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+910247459,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,False,False
+910375338,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+935671381,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+950075297,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+962212550,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,False,False
+667328279,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+640006296,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+661481525,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+680858122,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+739840659,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+951555639,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,False,False
+969998828,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,False,False
+993540449,Sncg-IRES2-FlpO-neo/wt;Ai65F/wt,tdt-,L2/3 IT,False,False
+993546249,Sncg-IRES2-FlpO-neo/wt;Ai65F/wt,tdt-,L2/3 IT,False,False
+706461666,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+912289883,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+912340608,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+668474280,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+964019012,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L2/3 IT,False,False
+898559010,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+904094833,Chrna2-Cre_OE25/wt;Pvalb-T2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L2/3 IT,False,False
+904832267,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+914412754,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+924641774,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+929533489,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+950334912,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+962991503,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,False,False
+994011832,Sncg-IRES2-FlpO-neo/wt;Ai65F/wt,tdt-,L2/3 IT,False,False
+919102928,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+652532278,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,True
+895777329,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,False
+971582554,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+681419547,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,True,False
+680574993,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,False
+847902873,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+681931335,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,True,False
+887207252,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+899711102,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+1043949183,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+989369441,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1035086628,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+839587095,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+970078299,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+984056604,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+897003522,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+899444388,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-2,False,True
+903818367,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904005886,Chrna2-Cre_OE25/wt;Pvalb-T2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 CT-1,False,True
+964872401,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+699818438,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+904709665,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+908902400,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+932730437,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+935175357,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+972470759,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+985930816,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+863438221,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+903801677,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+903868118,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904792055,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+834919146,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904094606,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904689430,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,True
+908927809,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+910310523,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+910472811,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-2,False,False
+919660405,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+919917343,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+926949214,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+972429481,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+972470526,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+904683111,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,True
+863438397,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+907381185,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,True
+851580834,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+963049789,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+907357664,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+841810440,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+864068767,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+903824576,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+987089070,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+934844641,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+966765795,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+636851021,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+736499017,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+741206508,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+853868880,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-2,False,True
+904899939,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+912572106,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+965750161,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 IT-1,False,True
+967739190,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+969301940,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+971517180,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 IT-2,True,False
+640026162,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-3,True,False
+645451457,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+716779804,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+880784016,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+882302773,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+917624301,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+919091442,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+926861604,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+740290698,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+740305711,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+882275192,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+904040156,Chrna2-Cre_OE25/wt;Pvalb-T2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 IT-2,False,True
+919979431,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,True,False
+966849374,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+972447551,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-1,True,False
+990347572,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+847862090,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+898952816,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+898962389,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+906485870,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+907148849,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+940603431,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+947390515,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+948338231,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+992399256,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+603481505,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+604098167,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+605493156,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+648143167,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+645363692,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+637380444,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+644581427,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+645818223,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+841854478,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+896111494,Crh-IRES-Cre_ZJH/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-3,False,False
+896602326,Sst-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+898683305,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+898953706,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+899705429,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+902311705,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+904839273,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,True
+908960987,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+913695508,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+950284677,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+950322566,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+961935353,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+963287636,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-3,False,True
+973486704,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+973772579,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+973778435,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+975282560,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+975488447,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+982731503,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+989128029,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+990213121,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+990229295,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+991975097,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+991980391,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+1035142577,Tac1-IRES2-Cre/wt;Vip-IRES-FlpO/wt;Ai193(TICL-EGFP-ICF-tdT)-hyg/wt,tdt+,L5 ET-3,False,False
+645444644,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+645529985,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+645542364,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+645807027,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+826840774,Ai65F/wt,tdt+,L5 ET-3,False,False
+826848163,Ai65F/wt,tdt+,L5 ET-3,False,False
+839337787,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+882449590,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+882763615,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+896118739,Crh-IRES-Cre_ZJH/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-3,False,True
+896124663,Crh-IRES-Cre_ZJH/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-3,False,True
+898894447,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+898939046,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+907429679,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,True,False
+908632324,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+909547798,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+912014913,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+948312017,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+970747135,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,False
+971582405,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+972549205,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+973440862,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+973478464,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+975449315,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+976964380,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+982732167,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+983550630,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+983638695,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+987036222,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+989153463,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+990258379,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+990271469,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+990599962,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+991966596,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+992023765,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+992220647,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+992393250,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+992782216,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+1000780329,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+645444689,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,True
+651055533,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+681639459,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+898967483,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+916473265,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+926926652,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+932130950,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+948405847,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+970810491,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+971702340,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,False
+972458284,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+973488284,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+982738610,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+989522310,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,False
+990350059,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,True,False
+990354179,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+990557098,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+992205657,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+992393180,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+992412609,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+992790109,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+823218199,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+823260493,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+823268448,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+826840735,Ai65F/wt,tdt+,L5 ET-3,False,False
+827867891,Ai65F/wt,tdt+,L5 ET-3,False,True
+827903615,Ai65F/wt,tdt+,L5 ET-3,True,False
+827968165,Ai65F/wt,tdt+,L5 ET-3,True,False
+880784997,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+898967534,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+899473601,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,True
+901440363,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+901445982,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+906552550,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+909564578,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+937880943,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+939539000,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+940778879,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+940794414,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+948277237,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+950243428,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+950272456,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+961235271,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+962087670,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+963283581,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 ET-3,False,False
+965052351,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+965072268,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+970683827,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+970760401,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+972557075,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,False
+982728140,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+987172681,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+989131618,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+989385812,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+990225226,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+990607167,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+992021164,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+992749267,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,True
+994887261,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-2,False,False
+995565521,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+1043785128,Slc17a8-iCre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+916620597,Glt25d2-Cre_NF107/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,True,False
+637848035,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1038773445,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+727134547,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+982542941,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+834030537,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+853581206,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+902332313,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+966473885,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+967310207,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+978571024,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+653197964,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+644953476,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+653193740,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+831228486,Ctxn3-IRES2-FlpO-neo/wt;Ai65F/wt,tdt+,L6 CT-1,False,True
+863450651,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+902357532,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+908858936,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+965091329,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 CT-1,False,False
+965598664,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+973498848,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+985832231,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+986867466,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+646545810,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+667490896,Ndnf-IRES2-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+693266006,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+811347913,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+841788339,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+851542876,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+851580386,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+851632776,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+851733264,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+853511959,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+853739259,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+853783953,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+863515305,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+889486893,Calb2-IRES-Cre/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L6 CT-1,False,False
+893371082,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+902074217,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+902284580,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+903890643,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904036565,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904051017,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904683452,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+904935208,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+913819943,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+917596020,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+918953508,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+961908189,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+964887215,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+965609536,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+983916754,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+986853824,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+646565496,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+853692765,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+902311826,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904796843,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+907319241,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+907462719,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+930057008,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+931814669,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+931941575,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+990518594,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+811355609,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,True,False
+853738976,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+864012243,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+901983596,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+904653320,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+920549874,Vip-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L6 CT-1,False,False
+920880594,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+929416648,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+942421907,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,True,False
+985908331,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,True
+988932172,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,True
+990352026,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+646849289,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+646574007,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+977051346,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,True
+978638200,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,True
+978652004,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+988975250,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+916582970,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1010667236,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,True
+601628311,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-2,True,False
+899378174,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,False
+976957750,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-2,False,False
+644818070,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,True,False
+645435058,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-2,False,False
+644592469,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+645648565,Tlx3-Cre_PL56/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+695406854,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+847880487,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,True
+891911493,Calb2-IRES-Cre/wt;Sst-IRES-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L5 IT-2,False,False
+895878023,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-1,False,False
+947281123,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,False
+983319917,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-2,False,False
+880895865,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+645536677,Tlx3-Cre_PL56/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+971546167,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,True,False
+895562607,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-1 Chrna6,False,False
+947504249,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-3,False,True
+679499842,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+717306549,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+880884775,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+882206710,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+939537835,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+953996283,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+956433844,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+623328910,Scnn1a-Tg2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+628545731,Scnn1a-Tg2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+642777215,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,True,False
+643510812,Nr5a1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+698726330,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+699810540,Slc17a8-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+717085044,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+612410245,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+638813221,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+638831018,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+639360153,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+645364320,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+645379753,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+693265542,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+701160557,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+764056194,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+824972626,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,True
+895674035,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,True
+956571115,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,False,False
+969580983,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+970740639,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-3 Pld5,False,False
+645368074,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+645453340,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+681907807,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,True
+639242112,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+644964595,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5 IT-1,False,True
+645380099,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+645547517,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+648315812,Scnn1a-Tg2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+828727287,Htr3a-Cre_NO152/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+839285831,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+882322637,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+893450158,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,True
+898608019,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-3 Pld5,False,False
+899481714,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 IT-3 Pld5,False,False
+963225872,Pvalb-IRES-Cre/wt;Th-P2A-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt-,L4 IT,False,False
+978162264,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+1044350923,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+644933664,Oxtr-T2A-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L2/3 IT,True,False
+764482368,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+820009113,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,True
+825430061,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,True
+899583778,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,True,False
+950154720,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,True
+973777288,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+763970766,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,True
+764475368,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+764492424,Scnn1a-Tg1-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+898889738,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4 IT,False,False
+901364185,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,,False,False
+948372246,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,True
+951747950,Slc17a6-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+956084807,Pvalb-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L2/3 IT,False,False
+971557004,Slc32a1-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L4/L5 IT,False,False
+975405575,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+990354927,Slc17a7-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 IT-2,False,True
+645369849,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+927489061,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,True
+977040125,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,False,False
+1039251161,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+1038767044,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-2,False,False
+867742255,Penk-IRES2-Cre-neo/wt;Slc17a6-IRES2-FlpO/wt;Ai65(RCFL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+645000232,Rorb-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+656721795,Chrna2-Cre_OE25/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,True,False
+638978050,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+642998101,Sim1-Cre_KJ18/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+645348660,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+992769339,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+639374007,Scnn1a-Tg3-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+648035771,Scnn1a-Tg2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4 IT,False,False
+975282813,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L4/L5 IT,False,False
+898670132,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,,False,False
+1054714226,Esr2-IRES2-Cre/wt;Ai14(RCL-tdT)/wt,tdt+,L5/L6 IT Car3,False,False
+645458163,Rbp4-Cre_KL100/wt;Ai14(RCL-tdT)/wt,tdt+,L5 ET-3,False,False
+653200894,Ntsr1-Cre_GN220/wt;Ai14(RCL-tdT)/wt,tdt+,L6 CT-1,False,False
+926770192,Gad2-IRES-Cre/wt;Ai14(RCL-tdT)/wt,tdt-,L5 ET-2,False,False
+1036186120,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False
+1039243792,Ctgf-T2A-dgCre/wt;Ai14(RCL-tdT)/wt,tdt+,L6b,True,False

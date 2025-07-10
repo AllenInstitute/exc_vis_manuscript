@@ -1,0 +1,28 @@
+{
+   
+    "color_file": "../data/hex_color_dict.json",
+    "morph_feature_name_relabel": "../data/Master_Feature_Relabel_Map.json",
+    "fmost_metadata_file": "../data/wnm/FullMorphMetaData_Master.csv",
+    "fmost_projection_matrix_roll_up": "../data/wnm/ProjectionMatrix_tip_and_branch_roll_up.csv",
+    "fmost_pseq_combined_dend_umap_coords": "../derived_data/pseq_and_wnm_combined_morph_umap.csv",
+    "fmost_only_morpho_umap_embeddings": "../derived_data/wnm_only_umap_embeddings.csv",
+    "pseq_met_labels_file": "../derived_data/exc_met_cell_text_assignments.csv",
+    "pseq_raw_dend_features": "../data/patchseq/morph_features_mMET_exc_wide_unnormalized.csv",
+    "fmost_entire_axon_features": "../data/wnm/fMOST_Complete_Axon_Features.csv",
+    "patchseq_genotype_metadata": "../data/patchseq/pseq_genotype_reporter_by_id.csv",
+    "patch_seq_morph_umap_locations": "../derived_data/morpho_umap_coordinates_t_seeded.csv",
+    "wnm_local_axon_predicting_pred_met_type_confmat": "../derived_data/wnm_local_axon_predicts_predicted_met_type_confmat.csv",
+    "fmost_raw_local_axon_feature_file": "../data/wnm/AxonRawReatureWide.csv",
+    "fmost_slice_cropped_chamfer_correct_local_dend_feature_file": "../data/wnm/RawFeaturesWide_ChamferCorr.csv",
+    "fmost_raw_local_histogram_file":"../data/wnm/wnm_raw_dend_aligned_histogram.csv",
+    "fmost_raw_local_dend_feature_file":"../data/wnm/wnm_raw_dend_raw_features_wide.csv",
+    "vis_top_flatmap_retnotopy_data": "../derived_data/visual_areas_alt_azi_by_voxels.csv",
+    "ccf_top_view_fmost_soma_locations": "../derived_data/wnm_somas_projected_to_top_view.csv",
+    "ccf_top_view_structure_boundaries": "../derived_data/vis_top_projcetion_boundaries.json",
+    
+
+    "slab_csv_dir": "Internal/Allen/File/Path",
+    "flatmap_input_dir": "Internal/Allen/File/Path",
+    "fmost_layer_aligned_swc_dir": "Internal/Allen/File/Path"
+
+  }
