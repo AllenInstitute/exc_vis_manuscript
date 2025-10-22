@@ -39,7 +39,11 @@ SUBCLASS_DISPLAY_NAMES = {
 
 def plot_cross_modal_heatmap(ax, sc, h5f, ps_anno_df, ps_tx_data_file):
     gene_lf = {}
-    specimen_ids = h5f[sc]["morph"]["specimen_ids"][:]
+
+    train_specimen_ids = h5f[sc]["morph"]["train_specimen_ids"][:]
+    test_specimen_ids = h5f[sc]["morph"]["test_specimen_ids"][:]
+    specimen_ids = np.concatenate([train_specimen_ids, test_specimen_ids])
+
     for modality in ("ephys", "morph"):
         genes = h5f[sc][modality]["genes"][:]
         genes = np.array([s.decode() for s in genes])
@@ -79,7 +83,7 @@ def main(args):
     ps_anno_df.set_index("spec_id_label", inplace=True)
 
     example_sc = "L4-L5-IT"
-    h5f = h5py.File(os.path.join(args["sparse_rrr_cv_fit_dir"], f"sparse_rrr_cv_{example_sc}.h5"), "r")
+    h5f = h5py.File(os.path.join(args["sparse_rrr_cv_fit_dir"], f"sparse_rrr_cv_holdout_{example_sc}.h5"), "r")
     modality = "ephys"
 
     # Fill in NaNs (dealing with rhdf5 implementation)
@@ -91,7 +95,7 @@ def main(args):
     fig = plt.figure(figsize=(7.5, 10))
     gs = gridspec.GridSpec(
         6, 1,
-        height_ratios=(1.75, 0.2, 1.5, 0.2, 0.75, 0.75),
+        height_ratios=(1.75, 0.2, 1.5, 0.2, 0.85, 0.65),
         hspace=0.5,
         wspace=0.4,
     )
@@ -158,7 +162,7 @@ def main(args):
     n_ephys_lf = {}
     for sc in SUBCLASS_DISPLAY_NAMES.keys():
         for modality in sp_rrr_parameters_info[sc].keys():
-            n_cells = len(h5f[sc][modality]['specimen_ids'])
+            n_cells = len(h5f[sc][modality]['train_specimen_ids']) + len(h5f[sc][modality]['test_specimen_ids'])
             n_features = len(sp_rrr_features_info[sc][modality])
             rank = sp_rrr_parameters_info[sc][modality]["sparse_rrr"]["rank"]
             alpha = sp_rrr_parameters_info[sc][modality]["sparse_rrr"]["alpha"]
@@ -195,6 +199,8 @@ def main(args):
     sc_bottom = sc_to_plot[4:]
 
     print(n_ephys_lf)
+    print("top widths", [n_ephys_lf[sc] for sc in sc_top])
+    print("bottom widths", [n_ephys_lf[sc] for sc in sc_bottom])
 
     gs_crossmodal_top = gridspec.GridSpecFromSubplotSpec(
         1, 4,

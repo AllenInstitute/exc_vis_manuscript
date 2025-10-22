@@ -6,11 +6,13 @@ from adjustText import adjust_text
 
 def plot_side_by_side_latent_factors(w, v, gene_data, feature_data, gs, ax_label_prefix,
     corr_radius=1, x_index=0, y_index=1,
-    n_genes_to_plot=10, n_features_to_plot=10, scatter_colors=None,
+    n_genes_to_plot=10, n_features_to_plot=10, scatter_colors=None, edge_colors=None,
     fixed_size=True, axis_arrow_length=0.6):
 
     if scatter_colors is None:
         scatter_colors = "k"
+    if edge_colors is None:
+        edge_colors = "white"
 
     if w.shape[1] < 2:
         print("Too few ranks of latent space to plot")
@@ -34,7 +36,7 @@ def plot_side_by_side_latent_factors(w, v, gene_data, feature_data, gs, ax_label
         gene_lf[:, y_index],
         c=scatter_colors,
         s=2,
-        edgecolors="white",
+        edgecolors=edge_colors,
         linewidths=0.25,
     )
     ax_r.scatter(
@@ -42,7 +44,7 @@ def plot_side_by_side_latent_factors(w, v, gene_data, feature_data, gs, ax_label
         feature_lf[:, y_index],
         c=scatter_colors,
         s=2,
-        edgecolors="white",
+        edgecolors=edge_colors,
         linewidths=0.25,
     )
 
@@ -179,10 +181,12 @@ def plot_side_by_side_latent_factors(w, v, gene_data, feature_data, gs, ax_label
 
 def plot_single_rank_latent_factor(w, v, gene_data, feature_data, gs, ax_label_prefix,
     corr_radius=1, axis_arrow_length=0.4,
-    n_genes_to_plot=10, n_features_to_plot=10, scatter_colors=None):
+    n_genes_to_plot=10, n_features_to_plot=10, scatter_colors=None, edge_colors=None):
 
     if scatter_colors is None:
         scatter_colors = "k"
+    if edge_colors is None:
+        edge_colors = "white"
 
     gene_lf = gene_data.values @ w
     feature_lf = feature_data.values @ v
@@ -200,23 +204,24 @@ def plot_single_rank_latent_factor(w, v, gene_data, feature_data, gs, ax_label_p
     ax_l = plt.subplot(gs_lf[0, 0])
     ax_r = plt.subplot(gs_lf[0, 1])
 
-    sns.stripplot(
-        x=gene_lf[:, 0],
-        y=["category"] * gene_lf.shape[0],
+    jitter = np.random.uniform(size=gene_lf.shape[0], low=-0.1, high=0.1)
+    ax_l.scatter(
+        gene_lf[:, 0],
+        jitter,
         c=scatter_colors,
         s=2,
-        edgecolor="white",
+        edgecolors=edge_colors,
         linewidth=0.25,
-        ax=ax_l
     )
-    sns.stripplot(
-        x=feature_lf[:, 0],
-        y=["category"] * gene_lf.shape[0],
+
+    jitter = np.random.uniform(size=feature_lf.shape[0], low=-0.1, high=0.1)
+    ax_r.scatter(
+        feature_lf[:, 0],
+        jitter,
         c=scatter_colors,
         s=2,
-        edgecolor="white",
+        edgecolors=edge_colors,
         linewidth=0.25,
-        ax=ax_r
     )
     print(ax_l.get_ylim())
     max_l_coord = max(np.abs(ax_l.get_xlim()))

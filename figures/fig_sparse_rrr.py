@@ -150,29 +150,52 @@ SUBCLASS_DISPLAY_NAMES = {
 }
 
 def get_sp_rrr_fit_info(filepart, modality, h5f):
-    specimen_ids = h5f[filepart][modality]["specimen_ids"][:]
+    train_specimen_ids = h5f[filepart][modality]["train_specimen_ids"][:]
+    test_specimen_ids = h5f[filepart][modality]["test_specimen_ids"][:]
     genes = h5f[filepart][modality]["genes"][:]
     genes = np.array([s.decode() for s in genes])
     w = h5f[filepart][modality]["w"][:].T
     v = h5f[filepart][modality]["v"][:].T
 
-    return specimen_ids, genes, w, v
+    return train_specimen_ids, test_specimen_ids, genes, w, v
 
 
-def select_and_normalize_feature_data(specimen_ids, filepart, modality, select_features, data_df):
+def select_and_normalize_feature_data(train_specimen_ids, test_specimen_ids,
+        filepart, modality, select_features, data_df):
     features = select_features[filepart][modality]
+    all_specimen_ids = np.concatenate([train_specimen_ids, test_specimen_ids])
     if modality == "ephys":
-        feature_data = data_df.loc[specimen_ids, [str(ft) for ft in features]]
+        feature_data = data_df.loc[all_specimen_ids, [str(ft) for ft in features]]
         feature_data.columns = select_features[filepart]["ephys_text"]
         feature_data.columns = [relabel_ephys_column(c) for c in feature_data.columns]
     else:
-        feature_data = data_df.loc[specimen_ids, features]
+        feature_data = data_df.loc[all_specimen_ids, features]
         feature_data.columns = [relabel_morph_column(c) for c in feature_data.columns]
-    feature_data = (feature_data - feature_data.mean(axis=0)) / feature_data.std(axis=0)
+    # only use training specimens to normalize
+    feature_data = (
+        (feature_data - feature_data.loc[train_specimen_ids, :].mean(axis=0)) /
+        feature_data.loc[train_specimen_ids, :].std(axis=0)
+    )
     return feature_data
 
+def holdout_r2(w, v, gene_data, feature_data, train_specimen_ids, test_specimen_ids,
+    train_sample_ids, test_sample_ids):
 
-def plots_for_modality( w, v, gene_data, feature_data, cell_colors, gs, lf_prefix,
+    # train/test split
+    x_train = gene_data.loc[train_sample_ids, :].values
+    x_test = gene_data.loc[test_sample_ids, :].values
+    y_train = feature_data.loc[train_specimen_ids, :].values
+    y_test = feature_data.loc[test_specimen_ids, :].values
+
+    # mean centering
+    x_test = x_test - x_train.mean(axis=0)
+    y_test = y_test  - y_train.mean(axis=0)
+
+    r2 = 1 - np.sum((y_test - x_test @ w @ v.T) ** 2) / np.sum(y_test ** 2)
+    return r2
+
+
+def plots_for_modality( w, v, gene_data, feature_data, cell_colors, edge_colors, gs, lf_prefix,
         corr_radius=2.7):
     rank = w.shape[1]
     print("rank ", rank)
@@ -183,7 +206,8 @@ def plots_for_modality( w, v, gene_data, feature_data, cell_colors, gs, lf_prefi
             gs, lf_prefix,
             corr_radius=1,
             n_features_to_plot=5, n_genes_to_plot=5,
-            scatter_colors=cell_colors
+            scatter_colors=cell_colors,
+            edge_colors=edge_colors,
         )
     else:
         lfp.plot_side_by_side_latent_factors(
@@ -193,7 +217,8 @@ def plots_for_modality( w, v, gene_data, feature_data, cell_colors, gs, lf_prefi
             corr_radius=corr_radius,
             n_features_to_plot=3, n_genes_to_plot=3,
             x_index=0, y_index=1,
-            scatter_colors=cell_colors)
+            scatter_colors=cell_colors,
+            edge_colors=edge_colors)
 
 
 def relabel_ephys_column(c):
@@ -283,7 +308,7 @@ def translation_from_spc_to_feature(specimen_ids, spca_df, ephys_feat_df,
 def plot_lf_vs_feature(ax, specimen_ids, lf_ind, feat_name, v,
         gene_lf, features, orig_df,
         alt_feat_df=None, alt_feat_name=None, spca_info_dict=None, m=None, c=None,
-        n_span=50, scatter_color="k", xlabel="", ylabel=""):
+        n_span=50, scatter_color="k", edge_color="white", xlabel="", ylabel=""):
 
     # Get latent factors for prediction that span the space (use medians for others than selected LF)
     median_lf = np.median(gene_lf, axis=0)
@@ -316,7 +341,7 @@ def plot_lf_vs_feature(ax, specimen_ids, lf_ind, feat_name, v,
 
     ax.scatter(gene_lf[:, lf_ind], feat_values,
         c=scatter_color,
-        s=5, edgecolors="white", linewidths=0.25)
+        s=5, edgecolors=edge_color, linewidths=0.25)
     ax.plot(lf_span, model_pred_feat_space, linestyle="dashed", c="#333333")
 
     ax.set_xlabel(xlabel, fontsize=6)
@@ -360,7 +385,7 @@ def plot_binned_ap(ax, specimen_ids, values_for_binning, bins, ap_v, ap_v_spec_i
         ax.plot([-1.8, -1.8, -0.8], [15, -5, -5], lw=1.5, c="k")
         ax.text(-1.6, 2, "20 mV\n1 ms", fontsize=6, va='baseline', ha='left')
     ax.legend(loc='upper right', fontsize=5, frameon=False,
-        title=legend_title, title_fontsize=5, bbox_to_anchor=(1, 1.1))
+        title=legend_title, title_fontsize=5, bbox_to_anchor=(1.1, 1.2))
     ax.tick_params(axis="y", labelsize=6)
 
 
@@ -409,7 +434,7 @@ def plot_binned_subthresh(specimen_ids, values_for_binning, bins, trace_file, ax
         color = v_cmap(norm(values_for_binning[binned_filt == bin_idx].mean()))
         ax.plot(t, avg_v, c=color, lw=0.5, label=f"{bins[bin_idx - 1]} to {bins[bin_idx]}")
         ax.fill_between(t, y1=avg_v + sem_v, y2=avg_v - sem_v,
-            alpha=0.3, color=color, edgecolor='none', lw=0)
+            alpha=0.1, color=color, edgecolor='none', lw=0)
     h5f.close()
 
     sns.despine(ax=ax, bottom=True, left=True)
@@ -573,6 +598,7 @@ def main(args):
         "L5-ET": 3.2,
     }
 
+    values_for_r2_df = []
     for filepart in fileparts:
         gs_sub = gridspec.GridSpecFromSubplotSpec(
             2, 1,
@@ -581,14 +607,16 @@ def main(args):
         )
         for i, modality in enumerate(("ephys", "morph")):
             print(filepart, modality)
-            specimen_ids, genes, w, v = get_sp_rrr_fit_info(
+            train_specimen_ids, test_specimen_ids, genes, w, v = get_sp_rrr_fit_info(
                 filepart, modality, h5f
             )
-            cell_colors = [MET_TYPE_COLORS[t] for t in inf_met_df.loc[specimen_ids, "inferred_met_type"]]
+            all_specimen_ids = np.concatenate([train_specimen_ids, test_specimen_ids])
+            cell_colors = [MET_TYPE_COLORS[t] for t in inf_met_df.loc[all_specimen_ids, "inferred_met_type"]]
+            edge_colors = ["white"] * len(train_specimen_ids) + ["black"] * len(test_specimen_ids)
             feature_data = select_and_normalize_feature_data(
-                specimen_ids, filepart, modality,
+                train_specimen_ids, test_specimen_ids, filepart, modality,
                 sp_rrr_features_info, feature_df_dict[modality])
-            sample_ids = ps_anno_df.loc[specimen_ids, "sample_id"]
+            sample_ids = ps_anno_df.loc[all_specimen_ids, "sample_id"]
             gene_data = ps_data_df.loc[sample_ids, genes]
 
             if filepart in filepart_corr_radius:
@@ -599,9 +627,18 @@ def main(args):
             plots_for_modality(
                 w, v,
                 gene_data, feature_data,
-                cell_colors, gs_sub[i], prefix_dict[modality],
+                cell_colors, edge_colors, gs_sub[i], prefix_dict[modality],
                 corr_radius=corr_radius
             )
+
+            test_r2 = holdout_r2(w, v, gene_data, feature_data, train_specimen_ids, test_specimen_ids,
+                ps_anno_df.loc[train_specimen_ids, "sample_id"].values,
+                ps_anno_df.loc[test_specimen_ids, "sample_id"].values)
+            values_for_r2_df.append((
+                SUBCLASS_DISPLAY_NAMES[filepart],
+                modality + "_test",
+                test_r2,
+            ))
 
     gs_lower_a = gridspec.GridSpecFromSubplotSpec(
         1, 6,
@@ -612,46 +649,59 @@ def main(args):
 
     ax_r2 = plt.subplot(gs_lower_a[0])
     full_fileparts = ("L23-IT", "L4-L5-IT", "L6-IT", "L5L6-IT-Car3", "L5-ET", "L5-NP", "L6-CT", "L6b")
-    values_for_df = []
     for filepart in full_fileparts:
         for modality in ("ephys", "morph"):
-            values_for_df.append((
+            values_for_r2_df.append((
                 SUBCLASS_DISPLAY_NAMES[filepart],
-                modality,
+                modality + "_train_cv",
                 sp_rrr_parameters_info[filepart][modality]["sparse_rrr"]["r2_relaxed"]
             ))
-    r2_df = pd.DataFrame(values_for_df, columns=("subclass", "modality", "r2"))
-    sns.barplot(
+    pal = sns.color_palette(n_colors=2)
+    pastel_pal = sns.color_palette("pastel", n_colors=2)
+    r2_df = pd.DataFrame(values_for_r2_df, columns=("subclass", "modality", "r2"))
+    bar = sns.barplot(
         data=r2_df,
         x="subclass",
         y="r2",
         hue="modality",
+        order=[SUBCLASS_DISPLAY_NAMES[fp] for fp in full_fileparts],
+        hue_order=["ephys_train_cv", "ephys_test", "morph_train_cv", "morph_test"],
+        palette={
+            "ephys_train_cv": pal[0],
+            "ephys_test": pastel_pal[0],
+            "morph_train_cv": pal[1],
+            "morph_test": pastel_pal[1],
+        },
         ax=ax_r2,
         legend=False,
     )
-    ax_r2.set_ylim(top=0.25)
+
+    ax_r2.set_ylim(top=0.25, bottom=-0.04)
     ax_r2.tick_params(axis='both', labelsize=6)
     ax_r2.set_xlabel("")
-    ax_r2.set_ylabel("CV-$R^2$", fontsize=6)
+    ax_r2.set_ylabel("$R^2$", fontsize=6)
     sns.despine(ax=ax_r2)
+
 
     # L2/3 IT examples
     filepart = "L23-IT"
     modality = "ephys"
-    specimen_ids, genes, w, v = get_sp_rrr_fit_info(
+    train_specimen_ids, test_specimen_ids, genes, w, v = get_sp_rrr_fit_info(
         filepart, modality, h5f
     )
-    cell_colors = [MET_TYPE_COLORS[t] for t in inf_met_df.loc[specimen_ids, "inferred_met_type"]]
+    all_specimen_ids = np.concatenate([train_specimen_ids, test_specimen_ids])
+    cell_colors = [MET_TYPE_COLORS[t] for t in inf_met_df.loc[all_specimen_ids, "inferred_met_type"]]
+    edge_colors = ["white"] * len(train_specimen_ids) + ["black"] * len(test_specimen_ids)
     features = sp_rrr_features_info[filepart][modality]
     feature_data = select_and_normalize_feature_data(
-        specimen_ids, filepart, modality,
+        train_specimen_ids, test_specimen_ids, filepart, modality,
         sp_rrr_features_info, feature_df_dict[modality])
-    sample_ids = ps_anno_df.loc[specimen_ids, "sample_id"]
+    sample_ids = ps_anno_df.loc[all_specimen_ids, "sample_id"]
     gene_data = ps_data_df.loc[sample_ids, genes]
     gene_lf = gene_data.values @ w
 
     m, c = translation_from_spc_to_feature(
-        specimen_ids,
+        train_specimen_ids,
         ephys_df,
         ephys_feat_df,
         spca_info_dict,
@@ -662,7 +712,7 @@ def main(args):
     ax = plt.subplot(gs_lower_a[2])
     plot_lf_vs_feature(
         ax,
-        specimen_ids,
+        all_specimen_ids,
         0,
         "spiking_width_0",
         v,
@@ -675,6 +725,7 @@ def main(args):
         m=m, c=c,
         n_span=50,
         scatter_color=cell_colors,
+        edge_color=edge_colors,
         xlabel="L2/3 IT E-LF-1", ylabel="mean AP width (ms)"
     )
     ax.set_ylim(0.5, 1.5)
@@ -682,9 +733,9 @@ def main(args):
     ax = plt.subplot(gs_lower_a[3])
     plot_binned_ap(
         ax,
-        specimen_ids,
+        all_specimen_ids,
         gene_lf[:, 0],
-        [-3, -1, 1, 3],
+        [-1.5, -0.5, 0.5, 1.5],
         ap_v, ap_v_spec_ids,
         show_scale_bars=True,
         legend_title="L2/3 IT\nE-LF-1",
@@ -693,9 +744,9 @@ def main(args):
     ax = plt.subplot(gs_lower_a[5])
     sns.regplot(
         x=gene_lf[:, 0],
-        y=l23it_proj_pcs_df.loc[specimen_ids, "PC1"],
+        y=l23it_proj_pcs_df.loc[all_specimen_ids, "PC1"],
         ci=None,
-        scatter_kws=dict(s=5, color=cell_colors, edgecolors="white", linewidths=0.25),
+        scatter_kws=dict(s=5, color=cell_colors, edgecolors=edge_colors, linewidths=0.25),
         line_kws=dict(lw=1, color="black"),
         ax=ax,
     )
@@ -736,6 +787,7 @@ def main(args):
     )
     sns.despine(ax=ax)
 
+
     #########
 
     gs_lower_b = gridspec.GridSpecFromSubplotSpec(
@@ -748,20 +800,22 @@ def main(args):
     # L6b examples
     filepart = "L6b"
     modality = "ephys"
-    specimen_ids, genes, w, v = get_sp_rrr_fit_info(
+    train_specimen_ids, test_specimen_ids, genes, w, v = get_sp_rrr_fit_info(
         filepart, modality, h5f
     )
-    cell_colors = [MET_TYPE_COLORS[t] for t in inf_met_df.loc[specimen_ids, "inferred_met_type"]]
+    all_specimen_ids = np.concatenate([train_specimen_ids, test_specimen_ids])
+    cell_colors = [MET_TYPE_COLORS[t] for t in inf_met_df.loc[all_specimen_ids, "inferred_met_type"]]
+    edge_colors = ["white"] * len(train_specimen_ids) + ["black"] * len(test_specimen_ids)
     features = sp_rrr_features_info[filepart][modality]
     feature_data = select_and_normalize_feature_data(
-        specimen_ids, filepart, modality,
+        train_specimen_ids, test_specimen_ids, filepart, modality,
         sp_rrr_features_info, feature_df_dict[modality])
-    sample_ids = ps_anno_df.loc[specimen_ids, "sample_id"]
+    sample_ids = ps_anno_df.loc[all_specimen_ids, "sample_id"]
     gene_data = ps_data_df.loc[sample_ids, genes]
     gene_lf = gene_data.values @ w
 
     m, c = translation_from_spc_to_feature(
-        specimen_ids,
+        train_specimen_ids,
         ephys_df,
         ephys_feat_df,
         spca_info_dict,
@@ -772,7 +826,7 @@ def main(args):
     ax = plt.subplot(gs_lower_b[0])
     plot_lf_vs_feature(
         ax,
-        specimen_ids,
+        all_specimen_ids,
         0,
         "step_subthresh_1",
         v,
@@ -785,39 +839,43 @@ def main(args):
         m=m, c=c,
         n_span=50,
         scatter_color=cell_colors,
+        edge_color=edge_colors,
         xlabel="L6b E-LF-1", ylabel="input resistance (MΩ)"
     )
+    ax.set_xlim(-3.5, 2.6)
 
     ax = plt.subplot(gs_lower_b[1])
+    bins = [-2.5, -1, 0.5, 2]
     plot_binned_subthresh(
-        specimen_ids,
+        all_specimen_ids,
         gene_lf[:, 0],
-        [-3, -1, 1, 3],
+        bins,
         args["l6b_subthresh_traces_file"],
         ax,
         legend_title="L6b\nE-LF-1"
     )
 
-
     # L6 CT examples
     filepart = "L6-CT"
     modality = "morph"
-    specimen_ids, genes, w, v = get_sp_rrr_fit_info(
+    train_specimen_ids, test_specimen_ids, genes, w, v = get_sp_rrr_fit_info(
         filepart, modality, h5f
     )
-    cell_colors = [MET_TYPE_COLORS[t] for t in inf_met_df.loc[specimen_ids, "inferred_met_type"]]
+    all_specimen_ids = np.concatenate([train_specimen_ids, test_specimen_ids])
+    cell_colors = [MET_TYPE_COLORS[t] for t in inf_met_df.loc[all_specimen_ids, "inferred_met_type"]]
+    edge_colors = ["white"] * len(train_specimen_ids) + ["black"] * len(test_specimen_ids)
     features = sp_rrr_features_info[filepart][modality]
     feature_data = select_and_normalize_feature_data(
-        specimen_ids, filepart, modality,
+        train_specimen_ids, test_specimen_ids, filepart, modality,
         sp_rrr_features_info, feature_df_dict[modality])
-    sample_ids = ps_anno_df.loc[specimen_ids, "sample_id"]
+    sample_ids = ps_anno_df.loc[all_specimen_ids, "sample_id"]
     gene_data = ps_data_df.loc[sample_ids, genes]
     gene_lf = gene_data.values @ w
 
     ax = plt.subplot(gs_lower_b[2])
     plot_lf_vs_feature(
         ax,
-        specimen_ids,
+        all_specimen_ids,
         0,
         "apical_dendrite_max_path_distance",
         v,
@@ -826,13 +884,14 @@ def main(args):
         morph_df,
         n_span=50,
         scatter_color=cell_colors,
+        edge_color=edge_colors,
         xlabel="L6 CT M-LF-1", ylabel="apical max. path dist. (µm)"
     )
 
     ax = plt.subplot(gs_lower_b[3])
     plot_lf_vs_feature(
         ax,
-        specimen_ids,
+        all_specimen_ids,
         1,
         "soma_aligned_dist_from_pia",
         v,
@@ -841,6 +900,7 @@ def main(args):
         morph_df,
         n_span=50,
         scatter_color=cell_colors,
+        edge_color=edge_colors,
         xlabel="L6 CT M-LF-2", ylabel="soma depth (µm)"
     )
     ax.invert_yaxis()
@@ -848,7 +908,7 @@ def main(args):
     ax = plt.subplot(gs_lower_b[4])
     plot_morph_lineup_with_lf(
         ax,
-        specimen_ids,
+        all_specimen_ids,
         gene_lf[:, 0],
         args["layer_aligned_swc_dir"],
         layer_edges,

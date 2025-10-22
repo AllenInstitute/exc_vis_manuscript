@@ -20,9 +20,7 @@ class FigSparseRrrLfVsTxPcsParameters(ags.ArgSchema):
     )
     inferred_met_type_file = ags.fields.InputFile()
     tx_pc_dir = ags.fields.InputDir()
-    sparse_rrr_cv_fit_dir = ags.fields.InputDir()
     sparse_rrr_fit_file = ags.fields.InputFile()
-    sparse_rrr_feature_file = ags.fields.InputFile()
     sparse_rrr_parameters_file = ags.fields.InputFile()
     output_file = ags.fields.OutputFile()
 
@@ -99,7 +97,10 @@ def main(args):
         corr_dict[sc] = {}
 
         for modality in ("ephys", "morph"):
-            specimen_ids = h5f[sc][modality]["specimen_ids"][:]
+            train_specimen_ids = h5f[sc][modality]["train_specimen_ids"][:]
+            test_specimen_ids = h5f[sc][modality]["test_specimen_ids"][:]
+            specimen_ids = np.concatenate([train_specimen_ids, test_specimen_ids])
+
             genes = h5f[sc][modality]["genes"][:]
             genes = np.array([s.decode() for s in genes])
             ps_data_df = pd.read_feather(

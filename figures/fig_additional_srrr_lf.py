@@ -114,32 +114,36 @@ def main(args):
 
     fig = plt.figure(figsize=(7.5, 9))
     gs = gridspec.GridSpec(
-        4, 2,
+        5, 2,
         hspace=0.35,
         wspace=0.4,
     )
     plot_info_list = [
-        ("L4-L5-IT", "ephys", (2, 3), gs[0, 0]),
-        ("L4-L5-IT", "ephys", (2, 4), gs[0, 1]),
-        ("L6-IT", "ephys", (2, 3), gs[1, 0]),
-        ("L5-ET", "ephys", (2, 3), gs[1, 1]),
-        ("L5-ET", "ephys", (4, 5), gs[2, 0]),
-        ("L6-CT", "ephys", (0, 2), gs[2, 1]),
-        ("L6-CT", "morph", (0, 2), gs[3, 0]),
-        ("L6b", "ephys", (0, 2), gs[3, 1]),
+        ("L23-IT", "ephys", (0, 2), gs[0, 0]),
+        ("L4-L5-IT", "morph", (2, 3), gs[0, 1]),
+        ("L5-ET", "ephys", (2, 3), gs[1, 0]),
+        ("L5-ET", "ephys", (4, 5), gs[1, 1]),
+        ("L5-ET", "ephys", (4, 6), gs[2, 0]),
+        ("L5-ET", "morph", (0, 2), gs[2, 1]),
+        ("L6-CT", "ephys", (0, 2), gs[3, 0]),
+        ("L6-CT", "morph", (0, 2), gs[3, 1]),
+        ("L6b", "ephys", (2, 3), gs[4, 0]),
+        ("L6b", "ephys", (2, 4), gs[4, 1]),
     ]
 
     for info in plot_info_list:
         sc, modality, indices, gs_sub = info
         print(sc, modality, indices)
-        specimen_ids, genes, w, v = fig_sparse_rrr.get_sp_rrr_fit_info(
+        train_specimen_ids, test_specimen_ids, genes, w, v = fig_sparse_rrr.get_sp_rrr_fit_info(
             sc, modality, h5f
         )
-        cell_colors = [MET_TYPE_COLORS[t] for t in inf_met_df.loc[specimen_ids, "inferred_met_type"]]
+        all_specimen_ids = np.concatenate([train_specimen_ids, test_specimen_ids])
+        cell_colors = [MET_TYPE_COLORS[t] for t in inf_met_df.loc[all_specimen_ids, "inferred_met_type"]]
+        edge_colors = ["white"] * len(train_specimen_ids) + ["black"] * len(test_specimen_ids)
         feature_data = fig_sparse_rrr.select_and_normalize_feature_data(
-            specimen_ids, sc, modality,
+            train_specimen_ids, test_specimen_ids, sc, modality,
             sp_rrr_features_info, feature_df_dict[modality])
-        sample_ids = ps_anno_df.loc[specimen_ids, "sample_id"]
+        sample_ids = ps_anno_df.loc[all_specimen_ids, "sample_id"]
         gene_data = ps_data_df.loc[sample_ids, genes]
         if sc in filepart_corr_radius:
             corr_radius = filepart_corr_radius[sc]
@@ -153,7 +157,8 @@ def main(args):
             corr_radius=corr_radius,
             n_features_to_plot=3, n_genes_to_plot=3,
             x_index=indices[0], y_index=indices[1],
-            scatter_colors=cell_colors)
+            scatter_colors=cell_colors,
+            edge_colors=edge_colors)
 
     plt.savefig(args["output_file"], dpi=300, bbox_inches="tight")
 

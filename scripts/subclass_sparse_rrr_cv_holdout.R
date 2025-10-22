@@ -2,6 +2,7 @@ library(arrow)
 library(rhdf5)
 library(rjson)
 library(dplyr)
+library(caret)
 source("../scripts/sparseRRR.R")
 
 SUBCLASS_INFO <- list(
@@ -199,11 +200,13 @@ morph_features_file <- args[5]
 ephys_features_file <- args[6]
 select_features_file <- args[7]
 ref_pc_dir <- args[8]
+holdout_frac <- as.double(args[9])
 output_dir <- "../derived_data/sparse_rrr_results/"
 
+set.seed(2718)
 
-if (length(args) > 8) {
-    add_vgc <- strtoi(args[9])
+if (length(args) > 9) {
+    add_vgc <- strtoi(args[10])
 } else {
     add_vgc <- 0
 }
@@ -249,18 +252,34 @@ morph_df <- read.csv(morph_features_file, row.names = 1)
 selected_features <- fromJSON(file = select_features_file)
 specimen_ids <- rownames(inf_met_type_df)[
     inf_met_type_df$inferred_met_type %in% set_of_types]
-sample_spec_ids <- ps_anno_df |>
-    filter(spec_id_label %in% specimen_ids) |>
+
+print(paste("Total number of cells", length(specimen_ids)))
+
+in_train <- createDataPartition(
+    y = inf_met_type_df[specimen_ids, "inferred_met_type"],
+    p = 1 - holdout_frac,
+    list = FALSE
+)
+train_specimen_ids <- specimen_ids[in_train]
+test_specimen_ids <- specimen_ids[-in_train]
+
+train_sample_spec_ids <- ps_anno_df |>
+    filter(spec_id_label %in% train_specimen_ids) |>
     select(sample_id, spec_id_label) |>
     arrange(sample_id)
+test_sample_spec_ids <- ps_anno_df |>
+    filter(spec_id_label %in% test_specimen_ids) |>
+    select(sample_id, spec_id_label) |>
+    arrange(sample_id)
+
 
 # Set alpha sequence
 alphas <- c(0.0, 0.02, 0.05, 0.1, 0.2, 0.5, 0.75, 1.0)
 
 if (add_vgc) {
-    output_file <- file.path(output_dir, paste0("sparse_rrr_cv_", filepart, "_with_vgc.h5"))
+    output_file <- file.path(output_dir, paste0("sparse_rrr_cv_holdout_", filepart, "_with_vgc.h5"))
 } else {
-    output_file <- file.path(output_dir, paste0("sparse_rrr_cv_", filepart, ".h5"))
+    output_file <- file.path(output_dir, paste0("sparse_rrr_cv_holdout_", filepart, ".h5"))
 }
 
 message(paste0("Using output file ", output_file))
@@ -270,15 +289,22 @@ if (file.exists(output_file)) {
 }
 h5createFile(output_file)
 
+h5createGroup(output_file, "specimen_ids")
+h5createGroup(output_file, "specimen_ids/ephys")
+h5write(train_specimen_ids, file = output_file,
+    name = "specimen_ids/ephys/train")
+h5write(test_specimen_ids, file = output_file,
+    name = "specimen_ids/ephys/test")
+
 message("CV - genes and ephys")
 
 gene_data <- ps_data_df |>
-    filter(sample_id %in% sample_spec_ids$sample_id) |>
+    filter(sample_id %in% train_sample_spec_ids$sample_id) |>
     arrange(sample_id) |>
     select(-sample_id)
 gene_data_norm <- preprocess_data(gene_data, log_transform = TRUE)
 
-ephys_data <- ephys_df[sample_spec_ids$spec_id_label, ]
+ephys_data <- ephys_df[train_sample_spec_ids$spec_id_label, ]
 ephys_features <- selected_features[[filepart]]$ephys
 ephys_features <- paste0("X", ephys_features)
 ephys_data_norm <- ephys_data |>
@@ -300,9 +326,38 @@ ephys_result <- run_cv(
 
 save_to_h5(ephys_result, output_file, "ephys")
 
+
 morph_spec_ids <- specimen_ids[specimen_ids %in% rownames(morph_df)]
+print(paste("Total number of morph cells", length(morph_spec_ids)))
+
+
+in_train <- createDataPartition(
+    y = inf_met_type_df[morph_spec_ids, "inferred_met_type"],
+    p = 1 - holdout_frac,
+    list = FALSE
+)
+train_specimen_ids <- morph_spec_ids[in_train]
+test_specimen_ids <- morph_spec_ids[-in_train]
+train_sample_spec_ids <- ps_anno_df |>
+    filter(spec_id_label %in% train_specimen_ids) |>
+    select(sample_id, spec_id_label) |>
+    arrange(sample_id)
+test_sample_spec_ids <- ps_anno_df |>
+    filter(spec_id_label %in% test_specimen_ids) |>
+    select(sample_id, spec_id_label) |>
+    arrange(sample_id)
+
+h5createGroup(output_file, "specimen_ids/morph")
+h5write(train_specimen_ids, file = output_file,
+    name = "specimen_ids/morph/train")
+h5write(test_specimen_ids, file = output_file,
+    name = "specimen_ids/morph/test")
+
+
+message("CV - genes and morph")
+
 morph_sample_spec_ids <- ps_anno_df |>
-    filter(spec_id_label %in% morph_spec_ids)|>
+    filter(spec_id_label %in% train_specimen_ids)|>
     select(sample_id, spec_id_label) |>
     arrange(sample_id)
 gene_data <- ps_data_df |>

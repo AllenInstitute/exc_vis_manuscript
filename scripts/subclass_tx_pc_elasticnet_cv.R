@@ -153,8 +153,16 @@ ephys_df <- read.csv(ephys_features_file, row.names = 1)
 morph_df <- read.csv(morph_features_file, row.names = 1)
 selected_features <- fromJSON(file = select_features_file)
 
-specimen_ids <- rownames(inf_met_type_df)[
-    inf_met_type_df$inferred_met_type %in% set_of_types]
+# Get specimens and foldids from sRRR run
+srrr_filename <- file.path(output_dir,
+    paste0("sparse_rrr_cv_holdout_", filepart, ".h5"))
+ephys_foldid <- h5read(srrr_filename, "ephys/effect_of_alpha/foldid")[1, , drop = TRUE]
+morph_foldid <- h5read(srrr_filename, "morph/effect_of_alpha/foldid")[1, , drop = TRUE]
+ephys_train_specimen_ids <- h5read(srrr_filename, "specimen_ids/ephys/train")
+morph_train_specimen_ids <- h5read(srrr_filename, "specimen_ids/morph/train")
+print(ephys_train_specimen_ids)
+
+specimen_ids <- ephys_train_specimen_ids
 sample_spec_ids <- ps_anno_df %>%
     filter(spec_id_label %in% specimen_ids) %>%
     select(sample_id, spec_id_label) %>%
@@ -163,7 +171,7 @@ sample_spec_ids <- ps_anno_df %>%
 # Set alpha sequence
 alphas <- c(0, 0.02, 0.05, 0.1, 0.2, 0.5, 0.75, 0.9, 1.0)
 
-output_file <- file.path(output_dir, paste0("tx_pc_elasticnet_cv_", filepart, ".h5"))
+output_file <- file.path(output_dir, paste0("tx_pc_elasticnet_cv_holdout_", filepart, ".h5"))
 
 if (file.exists(output_file)) {
     file.remove(output_file)
@@ -181,10 +189,6 @@ ephys_data_norm <- ephys_data %>%
     select(all_of(ephys_features)) %>%
     preprocess_data(z_score = TRUE)
 
-# Get foldid from sRRR run
-srrr_filename <- file.path(output_dir,
-    paste0("sparse_rrr_cv_", filepart, ".h5"))
-foldid <- h5read(srrr_filename, "ephys/effect_of_alpha/foldid")[1, , drop = TRUE]
 
 message("Fitting ", ncol(ephys_data_norm), " ephys features")
 message("Using ", nrow(tx_pc_data), " cells")
@@ -193,14 +197,14 @@ ephys_result <- run_cv(
     tx_pc_data,
     ephys_data_norm,
     alphas = alphas,
-    foldid = foldid
+    foldid = ephys_foldid
 )
 save_to_h5(ephys_result, output_file, "ephys", sample_spec_ids$spec_id_label)
 
 
 message("CV - genes and morph")
 
-morph_spec_ids <- specimen_ids[specimen_ids %in% rownames(morph_df)]
+morph_spec_ids <- morph_train_specimen_ids
 morph_sample_spec_ids <- ps_anno_df %>%
     filter(spec_id_label %in% morph_spec_ids) %>%
     select(sample_id, spec_id_label) %>%
@@ -214,7 +218,6 @@ morph_data_norm <- morph_data %>%
     select(all_of(morph_features)) %>%
     preprocess_data(z_score = TRUE)
 
-foldid <- h5read(srrr_filename, "morph/effect_of_alpha/foldid")[1, , drop = TRUE]
 
 message("Fitting ", ncol(morph_data_norm), " morph features")
 message("Using ", nrow(tx_pc_data), " cells")
@@ -223,7 +226,7 @@ morph_result <- run_cv(
     tx_pc_data,
     morph_data_norm,
     alphas = alphas,
-    foldid = foldid
+    foldid = morph_foldid
 )
 save_to_h5(morph_result, output_file, "morph", morph_sample_spec_ids$spec_id_label)
 print(h5ls(output_file))
