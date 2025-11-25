@@ -367,7 +367,7 @@ def main(args):
         wnm_data_df.predicted_met_type.isin(SUBCLASS_MET_TYPES[sc]), :].copy()
     l4l5it_data.columns = [c.replace("-", "_") for c in l4l5it_data.columns]
     l4l5_lf_cols = l4l5it_data.columns[l4l5it_data.columns.str.startswith("LF")]
-    l4l5_lf_cols = l4l5_lf_cols[l4l5_lf_cols.str.endswith(sc)]
+    l4l5_lf_cols = l4l5_lf_cols[l4l5_lf_cols.str.endswith(sc.replace("-", "_"))]
     surf_cols = l4l5it_data.columns[l4l5it_data.columns.str.startswith("surface")]
     best_models = train_df.loc[sc, "best_model_type"]
 
@@ -415,6 +415,7 @@ def main(args):
     ax = surf_axes[1]
     xy_text_dict = {
         "ipsi_MOs": (0.4, 1.0),
+        "ipsi_ACAd": (0.45, 0.95),
         "ipsi_VISpl": (0, -0.1),
         'ipsi_VISrl': (-0.15, 0.3),
         "ipsi_VISa": (0.45, 0.2),
@@ -465,6 +466,14 @@ def main(args):
         [-5, -1],
         [1, -2],
     ])
+    if len(l4l5_lf_cols) > 2:
+        median_remaining_lf = l4l5it_data.loc[:, l4l5_lf_cols].median().values[2:]
+        l4l5it_lf_example_values = np.hstack([
+            l4l5it_lf_example_values,
+            np.tile(median_remaining_lf, (l4l5it_lf_example_values.shape[0], 1))
+        ])
+    print(l4l5_lf_cols)
+    print(l4l5it_lf_example_values)
 
     lf_scatter_axes = [
         plt.subplot(gs_l4l5it_lf[0, 0]),
@@ -492,11 +501,12 @@ def main(args):
     print(sc, "lf")
     print(best_models_lf)
 
-    specimen_ids, genes, w, v = get_sp_rrr_fit_info(
+    train_specimen_ids, test_specimen_ids, genes, w, v = get_sp_rrr_fit_info(
         sc, "morph", h5f
     )
+    specimen_ids = np.concatenate([train_specimen_ids, test_specimen_ids])
     feature_data = select_and_normalize_feature_data(
-        specimen_ids, sc, "morph",
+        train_specimen_ids, test_specimen_ids, sc, "morph",
         sp_rrr_features_info, morph_df)
     feature_lf = feature_data.values @ v
     feature_lf_std = feature_lf.std(axis=0)
@@ -767,7 +777,7 @@ def main(args):
         wnm_data_df.predicted_met_type.isin(SUBCLASS_MET_TYPES[sc]), :].copy()
     l5et_data.columns = [c.replace("-", "_") for c in l5et_data.columns]
     l5et_lf_cols = l5et_data.columns[l5et_data.columns.str.startswith("LF")]
-    l5et_lf_cols = l5et_lf_cols[l5et_lf_cols.str.endswith(sc)]
+    l5et_lf_cols = l5et_lf_cols[l5et_lf_cols.str.endswith(sc.replace("-", "_"))]
     surf_cols = l5et_data.columns[l5et_data.columns.str.startswith("surface")]
     best_models = train_df.loc[sc, "best_model_type"]
 
@@ -923,11 +933,17 @@ def main(args):
     )
 
     l5et_lf_example_values = np.array([
-        [0, 0],
+        [-3, 2],
         [2, 2],
-        [-3, -2],
+        [0, 0],
         [2, -2],
     ])
+    if len(l5et_lf_cols) > 2:
+        median_remaining_lf = l5et_data.loc[:, l5et_lf_cols].median().values[2:]
+        l5et_lf_example_values = np.hstack([
+            l5et_lf_example_values,
+            np.tile(median_remaining_lf, (l5et_lf_example_values.shape[0], 1))
+        ])
 
     lf_scatter_axes = [
         plt.subplot(gs_l5e_lf[0, 0]),
@@ -955,11 +971,12 @@ def main(args):
     print(sc, "lf")
     print(best_models_lf)
 
-    specimen_ids, genes, w, v = get_sp_rrr_fit_info(
+    train_specimen_ids, test_specimen_ids, genes, w, v = get_sp_rrr_fit_info(
         sc, "morph", h5f
     )
+    specimen_ids = np.concatenate([train_specimen_ids, test_specimen_ids])
     feature_data = select_and_normalize_feature_data(
-        specimen_ids, sc, "morph",
+        train_specimen_ids, test_specimen_ids, sc, "morph",
         sp_rrr_features_info, morph_df)
     feature_lf = feature_data.values @ v
     feature_lf_std = feature_lf.std(axis=0)
@@ -1027,6 +1044,7 @@ def main(args):
         "ipsi_VISal": (-0.1, 0.15),
         "ipsi_VISpl": (0, -0.05),
         'ipsi_VISrl': (-0.25, 0.3),
+        "ipsi_RSPagl": (0.45, -0.05),
     }
     xy_dict = {
         "ipsi_VISpl": (460, 1200),
@@ -1065,7 +1083,7 @@ def main(args):
         "ipsi_LD": (0.3, 0.7),
         "ipsi_LGd-co": (0.1, 0.15),
         "ipsi_LP": (1.15, 0.5),
-        "ipsi_APN": (1.15, 0.3),
+        "ipsi_POL": (1.15, 0.3),
         "ipsi_ZI": (1.15, 0.7),
     }
     xy_dict = {
@@ -1199,7 +1217,7 @@ def main(args):
         "ipsi_LGd-ip": (0.2, 0.1),
         "ipsi_LGv": (0, 0.3),
         "ipsi_OP": (0.65, 0.4),
-        "ipsi_APN": (0.65, 0.3),
+        "ipsi_POL": (0.65, 0.3),
         "ipsi_PG": (0.65, 0.2),
     }
     xy_dict = {

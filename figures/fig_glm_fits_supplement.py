@@ -225,14 +225,22 @@ def main(args):
     # Determine best models and how many regions to plot
     best_models = best_models[best_models != "null"]
     print(best_models)
+    for sc in SUBCLASSES_ORDER:
+        print(sc, len(best_models[sc]))
     print("n models", best_models.shape[0])
-
     n_col = 5
     n_row = 8
 
     if n_col * n_row <  best_models.shape[0]:
         print("Need to expand the grid...quitting")
         return
+    sc_count_starts = {
+        "L23-IT": 0,
+        "L6-CT": 3,
+        "L4-L5-IT": 5,
+        "L5-ET": 20,
+    }
+
 
     all_regions = []
     for r_list in REGION_CATEGORIES.values():
@@ -271,7 +279,6 @@ def main(args):
     flatmap_2d_coords = flatmap_2d_coords[flatmap_mask & flatmap_left_mask, :]
     flatmap_3d_coords = flatmap_3d_coords[flatmap_mask & flatmap_left_mask, :]
 
-
     ##### PLOTTING ##############
     fig = plt.figure(figsize=(7.5, 10))
     gs = gridspec.GridSpec(
@@ -291,18 +298,8 @@ def main(args):
         "lf": (1, ),
         "surface": (1, ),
     }
-    sc_x_locs = {
-        "full": -2.5,
-        "surface": -0.8,
-        "lf": -0.6,
-    }
-    sc_count_starts = {
-        "L23-IT": 0,
-        "L6-CT": 2,
-        "L4-L5-IT": 5,
-        "L5-ET": 20,
-    }
 
+    found_first = False
     for sc in SUBCLASSES_ORDER:
         gs_counter = sc_count_starts[sc]
         best_models_sc = best_models[sc]
@@ -338,14 +335,13 @@ def main(args):
                 ]
                 lf_coefs = lf_coefs.dropna(axis=1)
                 lf_odds = np.exp(lf_coefs)
-                print(lf_odds)
 
                 ax_lf.plot(np.arange(lf_odds.shape[1]), np.squeeze(lf_odds),
                     'o-', c='k', markersize=2)
                 ax_lf.set_xticks(np.arange(lf_odds.shape[1]))
                 ax_lf.set_xticklabels([f"{i}" for i in np.arange(lf_odds.shape[1]) + 1])
                 ax_lf.set_yscale("log")
-                ax_lf.set_ylim(1/4, 4)
+                ax_lf.set_ylim(1/5, 5)
                 ax_lf.set_xlim(-0.25, lf_odds.shape[1] - 0.75)
                 ax_lf.axhline(1, linestyle="dotted", color="gray", lw=0.75)
                 ax_lf.set_ylabel("odds", fontsize=5, labelpad=3.0)
@@ -402,12 +398,13 @@ def main(args):
                 sns.despine(ax=ax_surf, left=True, bottom=True)
 
             if first_of_subclass_flag:
+                x0, y0, width, height = subplot_spec.get_position(fig).bounds
                 if model_type in ("lf", "full"):
                     ax = ax_lf
                 else:
                     ax = ax_surf
-                ax.text(sc_x_locs[model_type], 1.15, SUBCLASS_NAMES[sc], fontweight="bold", fontsize=9,
-                    ha="left", transform=ax.transAxes)
+                ax.text(x0 - 0.005, y0 + height + 0.008, SUBCLASS_NAMES[sc], fontweight="bold", fontsize=9,
+                    ha="right", transform=fig.transFigure)
                 first_of_subclass_flag = False
 
             if r.startswith("ipsi_"):
@@ -426,13 +423,14 @@ def main(args):
                     color=REGION_COLORS[r], fontsize=7,
                     ha="center", transform=ax.transAxes
                 )
-            if gs_counter == 0:
-                ax_first = ax
+            if not found_first and model_type == "surface":
+                ax_first_surf = ax
+                found_first = True
 
             gs_counter += 1
 
-    ax_cbar = ax_first.inset_axes([1.01, 0.167, 0.1, 0.666],
-        transform=ax_first.transAxes)
+    ax_cbar = ax_first_surf.inset_axes([1.01, 0.167, 0.1, 0.666],
+        transform=ax_first_surf.transAxes)
     cbar = plt.colorbar(
         matplotlib.cm.ScalarMappable(cmap=matplotlib.colormaps["PuBu"]),
         cax=ax_cbar, orientation='vertical')
@@ -440,15 +438,15 @@ def main(args):
     cbar.outline.set_visible(False)
     ax_cbar.tick_params(labelsize=5, length=2)
 
-    print(ax_first.get_xlim(), ax_first.get_ylim())
-    ax_first.annotate("A", (400, 1300), (400, 1200),
+    print(ax_first_surf.get_xlim(), ax_first_surf.get_ylim())
+    ax_first_surf.annotate("A", (400, 1300), (400, 1200),
         arrowprops={"arrowstyle": "<-", "shrinkB": 0, "shrinkA": 1},
         fontsize=6,
         ha="center",
         zorder=15,
         annotation_clip=False,
     )
-    ax_first.annotate("M", (400, 1300), (500, 1300),
+    ax_first_surf.annotate("M", (400, 1300), (500, 1300),
         arrowprops={"arrowstyle": "<-", "shrinkB": 0, "shrinkA": 1},
         fontsize=6,
         va="center",

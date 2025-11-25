@@ -62,7 +62,8 @@ preprocess_data <- function(x, log_transform = FALSE, z_score = FALSE) {
 }
 
 
-save_to_h5 <- function(result, genes, specimen_ids, h5_filename, filepart, modality,
+save_to_h5 <- function(result, genes, train_specimen_ids, test_specimen_ids,
+    h5_filename, filepart, modality,
     r, alpha, requested_lambda) {
 
     prefix <- paste0(filepart, "/", modality)
@@ -80,8 +81,10 @@ save_to_h5 <- function(result, genes, specimen_ids, h5_filename, filepart, modal
 
     # Write data sets
     h5write(genes, file = h5_filename, name = paste0(prefix, "/genes"))
-    h5write(as.integer(specimen_ids), file = h5_filename,
-        name = paste0(prefix, "/specimen_ids"))
+    h5write(as.integer(train_specimen_ids), file = h5_filename,
+        name = paste0(prefix, "/train_specimen_ids"))
+    h5write(as.integer(test_specimen_ids), file = h5_filename,
+        name = paste0(prefix, "/test_specimen_ids"))
     h5write(result$w, file = h5_filename, name = paste0(prefix, "/w"))
     h5write(result$v, file = h5_filename, name = paste0(prefix, "/v"))
 }
@@ -160,7 +163,8 @@ morph_features_file <- args[4]
 select_features_file <- args[5]
 chosen_hyperparams_file <- args[6]
 ref_pc_dir <- args[7]
-output_file <- args[8]
+srrr_results_dir <- args[8]
+output_file <- args[9]
 
 
 message("loading data")
@@ -202,9 +206,10 @@ for (si in SUBCLASS_INFO) {
 
     message("Morphology")
 
-    specimen_ids <- rownames(inf_met_type_df)[
-        inf_met_type_df$inferred_met_type %in% set_of_types]
-    morph_spec_ids <- specimen_ids[specimen_ids %in% rownames(morph_df)]
+	h5_cv_filename <- file.path(srrr_results_dir,
+		paste0("sparse_rrr_cv_holdout_", filepart, ".h5"))
+	morph_spec_ids <- h5read(h5_cv_filename, "specimen_ids/morph/train")
+	morph_test_spec_ids <- h5read(h5_cv_filename, "specimen_ids/morph/test")
     morph_sample_spec_ids <- ps_anno_df %>%
         filter(spec_id_label %in% morph_spec_ids) %>%
         select(sample_id, spec_id_label) %>%
@@ -244,7 +249,7 @@ for (si in SUBCLASS_INFO) {
     print(dim(morph_relaxed_result$v))
 
     message("Saving morphology result")
-    save_to_h5(morph_relaxed_result, genes, morph_sample_spec_ids$spec_id_label,
+    save_to_h5(morph_relaxed_result, genes, morph_sample_spec_ids$spec_id_label, morph_test_spec_ids,
         output_file, filepart, "morph", r, alpha, lambda)
 }
 

@@ -38,7 +38,8 @@ MET_PRED_TYPES = {
 
 
 def sp_rrr_fit_info(filepart, modality, h5f, select_features):
-    specimen_ids = h5f[filepart][modality]["specimen_ids"][:]
+    train_specimen_ids = h5f[filepart][modality]["train_specimen_ids"][:]
+    test_specimen_ids = h5f[filepart][modality]["test_specimen_ids"][:]
     features = select_features[filepart][modality]
 
     w = h5f[filepart][modality]["w"][:].T
@@ -48,7 +49,8 @@ def sp_rrr_fit_info(filepart, modality, h5f, select_features):
     genes = np.array([s.decode() for s in genes])
 
     return {
-        "specimen_ids": specimen_ids,
+        "train_specimen_ids": train_specimen_ids,
+        "test_specimen_ids": test_specimen_ids,
         "features": features,
         "w": w,
         "v": v,
@@ -103,8 +105,8 @@ def main(args):
         feat_drop_mask = np.array([f not in excluded_features for f in features])
         features = [f for f in features if f not in excluded_features]
 
-        ps_means = ps_morph_df.loc[fit_info["specimen_ids"], features].mean(axis=0)
-        ps_stdev = ps_morph_df.loc[fit_info["specimen_ids"], features].std(axis=0)
+        ps_means = ps_morph_df.loc[fit_info["train_specimen_ids"], features].mean(axis=0)
+        ps_stdev = ps_morph_df.loc[fit_info["train_specimen_ids"], features].std(axis=0)
 
         full_morph_lf = ((full_morph_dend_df[features].values -
             ps_means.values[np.newaxis, :]) / ps_stdev.values[np.newaxis, :]) @ v

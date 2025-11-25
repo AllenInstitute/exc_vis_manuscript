@@ -279,6 +279,7 @@ def main(args):
 
     corr_df_list = []
     corr_sc_list = []
+    sc_lf_cols = {}
     for sc, met_types in MET_PRED_TYPES.items():
         specimen_ids = full_morph_lf_df.loc[
             full_morph_lf_df["predicted_met_type"].isin(met_types), :].index.values
@@ -292,6 +293,7 @@ def main(args):
         lf_cols = sc_full_morph_lf_df.columns[
             sc_full_morph_lf_df.columns.str.startswith("LF") &
             sc_full_morph_lf_df.columns.str.endswith(sc)]
+        sc_lf_cols[sc] = lf_cols
 
         local_res = spearmanr(sc_full_morph_lf_df.loc[:, lf_cols],
             sc_local_axon_df.loc[:, local_axon_cols],
@@ -356,6 +358,10 @@ def main(args):
     lf_col = "LF1_L23-IT"
     feat_label = "local axon\ndepth PC-2"
     feat_col = "axon_depth_pc_1"
+
+    print(corr_df_filt.loc[
+        (corr_df_filt.variable == feat_col) & (corr_df_filt.lf == lf_col), :])
+
     gs_row = gridspec.GridSpecFromSubplotSpec(
         1, 5,
         width_ratios=(1, 4, 0.5, 0.75, 1.25),
@@ -379,6 +385,7 @@ def main(args):
         show_axon=True,
         morph_spacing=500,
         cbar_width=cbar_width,
+        select_indices=[1, 3, 6, 9, 13, 15, 19],
     )
 
     ax_pc = ax_morph.inset_axes([1.3, 0, 0.15, 1], transform=ax_morph.transAxes)
@@ -415,6 +422,10 @@ def main(args):
     lf_col = "LF2_L4-L5-IT"
     feat_label = "local axon\ndepth PC-3"
     feat_col = "axon_depth_pc_2"
+
+    print(corr_df_filt.loc[
+        (corr_df_filt.variable == feat_col) & (corr_df_filt.lf == lf_col), :])
+
     gs_row = gridspec.GridSpecFromSubplotSpec(
         1, 4,
         width_ratios=(4, 0.5, 1, 2),
@@ -468,63 +479,16 @@ def main(args):
     sns.despine(ax=ax_lf)
 
 
-    # L6 CT
-#     subclass = "L6-CT"
-#     lf_label = "L6 CT M-LF-2"
-#     lf_col = "LF2_L6-CT"
-#     feat_label = "local axon\ndepth PC-5"
-#     feat_col = "axon_depth_pc_4"
-#     gs_row = gridspec.GridSpecFromSubplotSpec(
-#         1, 4,
-#         width_ratios=(4, 0.5, 1, 2),
-#         wspace=0.4,
-#         subplot_spec=gs[2]
-#     )
-#     specimen_ids = full_morph_lf_df.loc[full_morph_lf_df["predicted_met_type"].isin(MET_PRED_TYPES[subclass]), :].index.values
-#     sc_full_morph_lf_df = full_morph_lf_df.loc[specimen_ids, :]
-#     visp_spec_ids = sc_full_morph_lf_df.loc[sc_full_morph_lf_df["ccf_soma_location_nolayer"] == "VISp", :].index.values
-#     cell_colors = [MET_TYPE_COLORS[t] for t in full_morph_lf_df.loc[specimen_ids, "predicted_met_type"]]
-#     ax_morph = plt.subplot(gs_row[0])
-#     plot_morph_lineup_with_lf(
-#         ax_morph,
-#         visp_spec_ids,
-#         full_morph_lf_df.loc[visp_spec_ids, lf_col].values,
-#         args["full_swc_dir"],
-#         layer_edges,
-#         cbar_label=lf_label,
-#         vmin=-5, vmax=5,
-#         n_to_plot=9,
-#         show_axon=True,
-#         morph_spacing=500,
-#         cbar_width=cbar_width,
-#     )
-#
-#     ax_pc = ax_morph.inset_axes([1.35, 0, 0.15, 1], transform=ax_morph.transAxes)
-#     ax_morph.sharey(ax_pc)
-#     plot_axon_pc_weights(ax_pc, axon_pc_weights_df.loc[4, :], axon_pc_depths, layer_edges,
-#         xlabel="depth PC-5\nloadings")
-#
-#     ax_lf = plt.subplot(gs_row[3])
-#     sns.regplot(
-#         x=full_morph_lf_df.loc[specimen_ids, lf_col],
-#         y=local_axon_df.loc[specimen_ids, feat_col],
-#         ci=None,
-#         scatter_kws=dict(s=5, color=cell_colors, edgecolors="white", linewidths=0.25),
-#         line_kws=dict(lw=1, color="black"),
-#         ax=ax_lf,
-#     )
-#     ax_lf.set_xlabel(lf_label, fontsize=6)
-#     ax_lf.set_ylabel(feat_label, fontsize=6)
-#     ax_lf.tick_params(axis='both', length=3, labelsize=6)
-#     sns.despine(ax=ax_lf)
-
-
     # L2/3 IT
     subclass = "L23-IT"
     lf_label = "L2/3 IT M-LF-1"
     lf_col = "LF1_L23-IT"
     feat_label = "axon length in\nvisual areas (mm)"
     feat_col = "complete_axon_VIS_length"
+
+    print(corr_df_filt.loc[
+        (corr_df_filt.variable == feat_col) & (corr_df_filt.lf == lf_col), :])
+
     gs_row = gridspec.GridSpecFromSubplotSpec(
         1, 2,
         width_ratios=(5.5, 1.75),
@@ -549,7 +513,7 @@ def main(args):
         cbar_label=lf_label,
         vmin=-5, vmax=5,
         n_to_plot=4,
-        select_indices=[4, 7, 14, 20]
+        select_indices=[2, 5, 13, 19]
     )
     flat_h5f.close()
     print(complete_axon_df.loc[plotted_ids, feat_col] / 1000)
@@ -588,6 +552,10 @@ def main(args):
     lf_col = "LF1_L4-L5-IT"
     feat_label = "complete axon\nlength (mm)"
     feat_col = "complete_axon_total_length"
+
+    print(corr_df_filt.loc[
+        (corr_df_filt.variable == feat_col) & (corr_df_filt.lf == lf_col), :])
+
     gs_row = gridspec.GridSpecFromSubplotSpec(
         1, 2,
         width_ratios=(5.5, 1.75),
@@ -598,8 +566,10 @@ def main(args):
     sc_full_morph_lf_df = full_morph_lf_df.loc[specimen_ids, :]
     visp_spec_ids = sc_full_morph_lf_df.loc[sc_full_morph_lf_df["ccf_soma_location_nolayer"] == "VISp", :].index.values
     cell_colors = [MET_TYPE_COLORS[t] for t in full_morph_lf_df.loc[specimen_ids, "predicted_met_type"]]
+    print(complete_axon_df.loc[full_morph_lf_df.loc[visp_spec_ids, lf_col].sort_values().index, feat_col])
 
-    indices = np.linspace(0, len(visp_spec_ids) - 1, num=4).astype(int)
+#     indices = np.linspace(0, len(visp_spec_ids) - 1, num=4).astype(int)
+    indices = [0, 10, 24, 32]
     print(indices)
 
     sorted_by_val = np.argsort(full_morph_lf_df.loc[visp_spec_ids, lf_col])
@@ -659,71 +629,12 @@ def main(args):
     ax_lf.tick_params(axis='both', length=3, labelsize=6)
     sns.despine(ax=ax_lf)
 
-    # L6b
-#     subclass = "L6b"
-#     lf_label = "L6b M-LF-1"
-#     lf_col = "LF1_L6b"
-#     feat_label = "complete axon\n max euclid. dist. (mm)"
-#     feat_col = "complete_axon_max_euclidean_distance"
-#     gs_row = gridspec.GridSpecFromSubplotSpec(
-#         1, 2,
-#         width_ratios=(5.5, 1.75),
-#         wspace=0.4,
-#         subplot_spec=gs[5]
-#     )
-#     specimen_ids = full_morph_lf_df.loc[full_morph_lf_df["predicted_met_type"].isin(MET_PRED_TYPES[subclass]), :].index.values
-#     sc_full_morph_lf_df = full_morph_lf_df.loc[specimen_ids, :]
-#     visp_spec_ids = sc_full_morph_lf_df.loc[sc_full_morph_lf_df["ccf_soma_location_nolayer"] == "VISp", :].index.values
-#     cell_colors = [MET_TYPE_COLORS[t] for t in full_morph_lf_df.loc[specimen_ids, "predicted_met_type"]]
-#     flat_h5f = h5py.File(args["l6b_flat_morph_file"], "r")
-#     print(complete_axon_df.loc[full_morph_lf_df.loc[visp_spec_ids, lf_col].sort_values().index, feat_col])
-#     plotted_ids = plot_flat_morphs(
-#         gs_row[0],
-#         visp_spec_ids,
-#         full_morph_lf_df.loc[visp_spec_ids, lf_col].values,
-#         args["ccf_swc_dir"],
-#         flat_h5f,
-#         (bounds_ipsi, bounds_contra),
-# #         selected_areas=["VISp", "VISpm", "VISam", "VISa", "VISrl", "VISal", "VISl", "VISli", "VISpl", "VISpor"],
-#         cbar_label=lf_label,
-#         vmin=-5, vmax=5,
-#         n_to_plot=4,
-#         select_indices=[1, 4, 5, 6]
-#     )
-#     flat_h5f.close()
-#     print(complete_axon_df.loc[plotted_ids, feat_col] / 1000)
-#
-#     ax_lf = plt.subplot(gs_row[1])
-#     sns.regplot(
-#         x=full_morph_lf_df.loc[specimen_ids, lf_col],
-#         y=complete_axon_df.loc[specimen_ids, feat_col] / 1000,
-#         ci=None,
-#         scatter_kws=dict(s=5, color=cell_colors, edgecolors="white", linewidths=0.25),
-#         line_kws=dict(lw=1, color="black"),
-#         ax=ax_lf,
-#     )
-#     ax_lf.scatter(
-#         x=full_morph_lf_df.loc[visp_spec_ids, lf_col],
-#         y=complete_axon_df.loc[visp_spec_ids, feat_col] / 1000,
-#         c="black",
-#         s=8,
-#     )
-#     ax_lf.scatter(
-#         x=full_morph_lf_df.loc[plotted_ids, lf_col],
-#         y=complete_axon_df.loc[plotted_ids, feat_col] / 1000,
-#         c="firebrick",
-#         s=8,
-#     )
-#     ax_lf.set_xlabel(lf_label, fontsize=6)
-#     ax_lf.set_ylabel(feat_label, fontsize=6)
-#     ax_lf.tick_params(axis='both', length=3, labelsize=6)
-#     sns.despine(ax=ax_lf)
-
-    spacing = [1, 2, 2, 3, 1]
+    # Correlation heatmaps
+    spacing = [len(sc_lf_cols[sc]) for sc in corr_sc_list]
     gs_row = gridspec.GridSpecFromSubplotSpec(
         1, len(corr_sc_list) * 2 + 3,
         wspace=0.05,
-        width_ratios=[4] + spacing + [7] + spacing + [2],
+        width_ratios=[4] + spacing + [8] + spacing + [1],
         subplot_spec=gs[4],
     )
 
@@ -734,15 +645,15 @@ def main(args):
         print(sc)
         g = grouped_corr.get_group(sc)
         sc_pivot = g.pivot(columns=["lf"], index="variable", values="spearman_r")
-        sc_pivot = sc_pivot.reindex(index=used_local_cols)
+        sc_pivot = sc_pivot.reindex(index=used_local_cols, columns=sc_lf_cols[sc])
+        print(sc_pivot.head())
         ax = plt.subplot(gs_row[i + 1])
         if i == 0:
             yticklabels = [FEATURE_RELABEL[l] for l in used_local_cols]
         else:
             yticklabels = False
 
-
-        xticklabels = [f"M-LF-{j + 1}" for j in range(sc_pivot.shape[1])]
+        xticklabels = [f"M-LF-{j + 1}" for j in range(len(sc_lf_cols[sc]))]
         sns.heatmap(
             sc_pivot,
             square=True,
@@ -761,7 +672,7 @@ def main(args):
 
 
         sc_pivot = g.pivot(columns=["lf"], index="variable", values="spearman_r")
-        sc_pivot = sc_pivot.reindex(index=used_complete_cols)
+        sc_pivot = sc_pivot.reindex(index=used_complete_cols, columns=sc_lf_cols[sc])
         ax = plt.subplot(gs_row[i + len(corr_sc_list) + 2])
         if i == 0:
             yticklabels = [FEATURE_RELABEL[l] for l in used_complete_cols]
@@ -769,7 +680,7 @@ def main(args):
             yticklabels = False
 
 
-        xticklabels = [f"M-LF-{j + 1}" for j in range(sc_pivot.shape[1])]
+        xticklabels = [f"M-LF-{j + 1}" for j in range(len(sc_lf_cols[sc]))]
         sns.heatmap(
             sc_pivot,
             square=True,

@@ -453,7 +453,7 @@ def plot_binned_subthresh(specimen_ids, values_for_binning, bins, trace_file, ax
 
 
 def plot_morph_lineup_with_lf(ax, specimen_ids, lf_values, aligned_swc_dir, layer_edges,
-        n_to_plot=10, path_color="#cccccc", morph_spacing=300, show_axon=False,
+        n_to_plot=10, select_indices=None, path_color="#cccccc", morph_spacing=300, show_axon=False,
         vmin=None, vmax=None, cbar_label="", cbar_width=0.05, cbar_label_pos="default"):
 
     morph_cmap = matplotlib.colormaps["magma"]
@@ -463,10 +463,13 @@ def plot_morph_lineup_with_lf(ax, specimen_ids, lf_values, aligned_swc_dir, laye
         vmax = lf_values.max()
     norm = plt.Normalize(vmin, vmax)
 
-    if n_to_plot >= len(specimen_ids):
+    if select_indices is not None:
+        indices = select_indices
+    elif n_to_plot >= len(specimen_ids):
         indices = np.arange(len(specimen_ids)).astype(int)
     else:
         indices = np.linspace(0, len(specimen_ids) - 1, num=n_to_plot).astype(int)
+    print("lineup indices", indices)
 
     sorted_by_val = np.argsort(lf_values)
     xoffset = 0
