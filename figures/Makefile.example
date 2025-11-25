@@ -381,9 +381,10 @@ $(foreach j,$(SINGLE_FT_JOINED),$(eval $(call SINGLE_FT_RECIPE,$(call GET_FILE,$
 
 
 # Rules for sparse RRR CV fits
-SRRR_CV_FILES = $(addsuffix .h5, $(addprefix ../derived_data/sparse_rrr_results/sparse_rrr_cv_, $(SUBCLASS_ABBREV)))
+
 SRRR_PREREQS = $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv $(MORPH_UNNORM_FILE) $(EPHYS_SPCA_FILE) ../derived_data/features_for_sp_rrr.json
 SRRR_NODIAM_PREREQS = $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv $(MORPH_UNNORM_FILE) ../derived_data/features_for_sp_rrr.json
+SRRR_CV_FILES = $(addsuffix .h5, $(addprefix ../derived_data/sparse_rrr_results/sparse_rrr_cv_, $(SUBCLASS_ABBREV)))
 SRRR_CV_JOINED := $(join $(addsuffix :,$(SRRR_CV_FILES)),$(SUBCLASS_INDEX))
 
 define SRRR_RECIPE
@@ -393,9 +394,19 @@ endef
 
 $(foreach j,$(SRRR_CV_JOINED),$(eval $(call SRRR_RECIPE,$(call GET_FILE,$(j)),$(call GET_INDEX,$(j)))))
 
+SRRR_CV_HOLDOUT_FILES = $(addsuffix .h5, $(addprefix ../derived_data/sparse_rrr_results/sparse_rrr_cv_holdout_, $(SUBCLASS_ABBREV)))
+SRRR_CV_HOLDOUT_JOINED := $(join $(addsuffix :,$(SRRR_CV_HOLDOUT_FILES)),$(SUBCLASS_INDEX))
+
+define SRRR_HOLDOUT_RECIPE
+$(1): ../scripts/subclass_sparse_rrr_cv_holdout.R $(SRRR_PREREQS)
+        Rscript $$< $(2) $(SRRR_PREREQS) ../derived_data/ref_tx_pca_results/ 0.15
+endef
+
+$(foreach j,$(SRRR_CV_HOLDOUT_JOINED),$(eval $(call SRRR_HOLDOUT_RECIPE,$(call GET_FILE,$(j)),$(call GET_INDEX,$(j)))))
+
 
 # Rules for tx pc elasticnet CV fits
-TXPC_CV_FILES = $(addsuffix .h5, $(addprefix ../derived_data/sparse_rrr_results/tx_pc_elasticnet_cv_, $(SUBCLASS_ABBREV)))
+TXPC_CV_FILES = $(addsuffix .h5, $(addprefix ../derived_data/sparse_rrr_results/tx_pc_elasticnet_cv_holdout_, $(SUBCLASS_ABBREV)))
 TXPC_CV_JOINED := $(join $(addsuffix :,$(TXPC_CV_FILES)),$(SUBCLASS_INDEX))
 define TXPC_RECIPE
 $(1): ../scripts/subclass_tx_pc_elasticnet_cv.R $(SRRR_PREREQS)
@@ -416,8 +427,16 @@ $(foreach j,$(TXPC_CV_JOINED),$(eval $(call TXPC_RECIPE,$(call GET_FILE,$(j)),$(
 	--input_dir ../derived_data/sparse_rrr_results/ \
 	--output_file $@
 
+../derived_data/srrr_hyperparams_subclass_holdout.json: ../scripts/select_sparse_rrr_hyperparameters_holdout.py ../derived_data/sparse_rrr_results/sparse_rrr_cv_holdout_*.h5
+        python $< \
+        --input_dir ../derived_data/sparse_rrr_results/ \
+        --output_file $@
+
 ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5: ../scripts/subclass_sparse_rrr_selected.R $(SRRR_PREREQS) ../derived_data/srrr_hyperparams_subclass.json
 	Rscript $< $(SRRR_PREREQS) ../derived_data/srrr_hyperparams_subclass.json ../derived_data/ref_tx_pca_results/ $@
+
+../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5: ../scripts/subclass_sparse_rrr_selected_holdout.R $(SRRR_PREREQS) ../derived_data/srrr_hyperparams_subclass_holdout.json
+        Rscript $< $(SRRR_PREREQS) ../derived_data/srrr_hyperparams_subclass_holdout.json ../derived_data/ref_tx_pca_results/ ../derived_data/sparse_rrr_results/ $@
 
 ../derived_data/ps_cells_kim_proj_pcs.csv: ../scripts/callaway_ps_pcs.py $(KIM_ET_AL_ANNO_FILE) $(KIM_ET_AL_LOGCPM_FILE) $(KIM_ET_AL_MAPPING_FILE) $(KIM_ET_AL_EDGER_FILE) $(KIM_ET_AL_DESEQ2_FILE) $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE)  ../derived_data/inferred_met_types.csv
 	python $< \
@@ -437,14 +456,14 @@ $(foreach j,$(TXPC_CV_JOINED),$(eval $(call TXPC_RECIPE,$(call GET_FILE,$(j)),$(
 	--ephys_sweep_info_file ../derived_data/me_cell_ephys_sweep_info.json \
 	--output_file $@
 
-fig_sparse_rrr.pdf: fig_sparse_rrr.py latent_factor_plot.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass.json $(MORPH_UNNORM_FILE) $(EPHYS_SPCA_FILE) $(EPHYS_FEATURE_FILE) $(EPHYS_SPCA_INFO_FILE) $(AP_WAVEFORM_FILE) ../derived_data/me_cell_ephys_sweep_info.json ../derived_data/ps_cells_kim_proj_pcs.csv $(LAYER_DEPTHS_FILE) ../derived_data/l6b_subthresh_traces.h5
+fig_sparse_rrr.pdf: fig_sparse_rrr.py latent_factor_plot.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass_holdout.json $(MORPH_UNNORM_FILE) $(EPHYS_SPCA_FILE) $(EPHYS_FEATURE_FILE) $(EPHYS_SPCA_INFO_FILE) $(AP_WAVEFORM_FILE) ../derived_data/me_cell_ephys_sweep_info.json ../derived_data/ps_cells_kim_proj_pcs.csv $(LAYER_DEPTHS_FILE) ../derived_data/l6b_subthresh_traces.h5
 	python $< \
 	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
 	--ps_tx_data_file $(PS_TX_DATA_FILE) \
 	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
-	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 \
 	--sparse_rrr_feature_file ../derived_data/features_for_sp_rrr.json \
-	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass.json \
+	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass_holdout.json \
 	--morph_file $(MORPH_UNNORM_FILE) \
 	--ephys_file $(EPHYS_SPCA_FILE) \
 	--ephys_features_file $(EPHYS_FEATURE_FILE) \
@@ -459,12 +478,12 @@ fig_sparse_rrr.pdf: fig_sparse_rrr.py latent_factor_plot.py $(PS_TX_ANNO_FILE) $
 
 # --------- FIGURE 5 ------------
 
-../derived_data/sparse_rrr_fits_with_selected_hyperparams_nodiam.h5: ../scripts/subclass_sparse_rrr_selected_nodiam.R $(SRRR_NODIAM_PREREQS) ../derived_data/srrr_hyperparams_subclass.json
-	Rscript $< $(SRRR_NODIAM_PREREQS) ../derived_data/srrr_hyperparams_subclass.json ../derived_data/ref_tx_pca_results/ $@
+../derived_data/sparse_rrr_fits_with_selected_hyperparams_nodiam.h5: ../scripts/subclass_sparse_rrr_selected_nodiam.R $(SRRR_NODIAM_PREREQS) ../derived_data/srrr_hyperparams_subclass_holdout.json
+	Rscript $< $(SRRR_NODIAM_PREREQS) ../derived_data/srrr_hyperparams_subclass_holdout.json ../derived_data/ref_tx_pca_results/ ../derived_data/sparse_rrr_results/ $@
 
-../derived_data/sp_rrr_full_morph_latent_factors.csv: ../scripts/full_morph_latent_factors.py ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json $(MORPH_UNNORM_FILE)  ../data/wnm/RawFeaturesWide_ChamferCorr.csv  ../data/wnm/AxonRawReatureWide.csv $(WNM_META_FILE)
+../derived_data/sp_rrr_full_morph_latent_factors.csv: ../scripts/full_morph_latent_factors.py ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 ../derived_data/sparse_rrr_fits_with_selected_hyperparams_nodiam.h5 ../derived_data/features_for_sp_rrr.json $(MORPH_UNNORM_FILE)  ../data/wnm/RawFeaturesWide_ChamferCorr.csv  ../data/wnm/AxonRawReatureWide.csv $(WNM_META_FILE)
 	python $< \
-	--srrr_fits_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--srrr_fits_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 \
 	--srrr_fits_no_diam_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams_nodiam.h5 \
 	--srrr_features_file ../derived_data/features_for_sp_rrr.json \
 	--patchseq_morph_file $(MORPH_UNNORM_FILE) \
@@ -535,18 +554,6 @@ fig_wnm_lf.pdf: fig_wnm_lf.py ../data/wnm/AxonRawReatureWide.csv ../data/wnm/fMO
 ../derived_data/glm_lf_results/%_loo_results.csv: ../scripts/glm_lf_subclass_loo.R ../derived_data/data_for_glm_lf.csv
 	Rscript $< ../derived_data/data_for_glm_lf.csv ../derived_data/glm_lf_results/
 
-fig_glm_fits.pdf: fig_glm_fits.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_BUTTERFLY_ATLAS_FILE) $(ATLAS_LABELS_FILE) $(FLATMAP_BUTTERFLY_PROJ_FILE)
-	python $< \
-	--glm_results_dir ../derived_data/glm_lf_results \
-	--wnm_data_file ../derived_data/data_for_glm_lf.csv \
-	--projected_atlas_file $(FLATMAP_BUTTERFLY_ATLAS_FILE) \
-	--atlas_labels_file $(ATLAS_LABELS_FILE) \
-	--flatmap_file $(FLATMAP_BUTTERFLY_PROJ_FILE) \
-	--annot_file $(CCF_ANNOT_FILE) \
-	--output_file $@
-
-# --------- FIGURE 7 ------------
-
 ../derived_data/L4-L5-IT_flat_morphs.h5: ../scripts/flatten_morphologies.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_BUTTERFLY_PROJ_FILE) $(SURFACE_PATHS_FILE) $(CLOSEST_SURFACE_VOXEL_FILE)
 	python $< \
 	--input_file ../derived_data/data_for_glm_lf.csv \
@@ -567,13 +574,13 @@ fig_glm_fits.pdf: fig_glm_fits.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_
 	--met_type_selection "['L5 ET-1 Chrna6','L5 ET-2','L5 ET-3']" \
 	--output_file $@
 
-fig_glm_predictions.pdf: fig_glm_predictions.py ../derived_data/data_for_glm_lf.csv ../derived_data/inferred_met_types.csv $(MORPH_UNNORM_FILE) ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json $(FLATMAP_BUTTERFLY_ATLAS_FILE) $(ATLAS_LABELS_FILE) $(CCF_ANNOT_FILE)
+fig_glm_predictions.pdf: fig_glm_predictions.py ../derived_data/data_for_glm_lf.csv ../derived_data/inferred_met_types.csv $(MORPH_UNNORM_FILE) ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 ../derived_data/features_for_sp_rrr.json $(FLATMAP_BUTTERFLY_ATLAS_FILE) $(ATLAS_LABELS_FILE) $(CCF_ANNOT_FILE) ../derived_data/L4-L5-IT_flat_morphs.h5 ../derived_data/L5-ET_flat_morphs.h5
 	python $< \
 	--glm_results_dir ../derived_data/glm_lf_results \
 	--wnm_data_file ../derived_data/data_for_glm_lf.csv \
 	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
 	--morph_file $(MORPH_UNNORM_FILE) \
-	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 \
 	--sparse_rrr_feature_file ../derived_data/features_for_sp_rrr.json \
 	--projected_atlas_file $(FLATMAP_BUTTERFLY_ATLAS_FILE) \
 	--atlas_labels_file $(ATLAS_LABELS_FILE) \
@@ -725,28 +732,28 @@ fig_ephys_supplement_nonit.pdf: fig_ephys_supplement_nonit.py fig_ephys_suppleme
 
 # --------- ED FIGURE 15 ------------
 
-fig_srrr_methods.pdf: fig_srrr_methods.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass.json
+fig_srrr_methods.pdf: fig_srrr_methods.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass_holdout.json
 	python $< \
 	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
 	--ps_tx_data_file $(PS_TX_DATA_FILE) \
 	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
 	--sparse_rrr_cv_fit_dir ../derived_data/sparse_rrr_results/ \
-	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 \
 	--sparse_rrr_feature_file ../derived_data/features_for_sp_rrr.json \
-	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass.json \
+	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass_holdout.json \
 	--output_file $@
 
 
 # --------- ED FIGURE 16 ------------
 
-fig_additional_srrr_lf.pdf: fig_additional_srrr_lf.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass.json $(MORPH_UNNORM_FILE) $(EPHYS_SPCA_FILE) $(EPHYS_FEATURE_FILE) $(EPHYS_SPCA_INFO_FILE)
+fig_additional_srrr_lf.pdf: fig_additional_srrr_lf.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass_holdout.json $(MORPH_UNNORM_FILE) $(EPHYS_SPCA_FILE) $(EPHYS_FEATURE_FILE) $(EPHYS_SPCA_INFO_FILE)
 	python $< \
 	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
 	--ps_tx_data_file $(PS_TX_DATA_FILE) \
 	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
-	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
+	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 \
 	--sparse_rrr_feature_file ../derived_data/features_for_sp_rrr.json \
-	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass.json \
+	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass_holdout.json \
 	--morph_file $(MORPH_UNNORM_FILE) \
 	--ephys_file $(EPHYS_SPCA_FILE) \
 	--ephys_features_file $(EPHYS_FEATURE_FILE) \
@@ -766,16 +773,14 @@ fig_tx_pcs_supplement.pdf: fig_tx_pcs_supplement.py $(REF_TX_ANNO_FILE) $(PS_TX_
 
 # --------- ED FIGURE 18 ------------
 
-fig_srrr_lf_vs_tx_pc.pdf: fig_srrr_lf_vs_tx_pc.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 ../derived_data/features_for_sp_rrr.json ../derived_data/srrr_hyperparams_subclass.json
+fig_srrr_lf_vs_tx_pc.pdf: fig_srrr_lf_vs_tx_pc.py $(PS_TX_ANNO_FILE) $(PS_TX_DATA_FILE) ../derived_data/inferred_met_types.csv ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 ../derived_data/srrr_hyperparams_subclass_holdout.json
 	python $< \
 	--ps_tx_anno_file $(PS_TX_ANNO_FILE) \
 	--ps_tx_data_file $(PS_TX_DATA_FILE) \
 	--inferred_met_type_file ../derived_data/inferred_met_types.csv \
 	--tx_pc_dir ../derived_data/ps_tx_pca_results/ \
-	--sparse_rrr_cv_fit_dir ../derived_data/sparse_rrr_results/ \
-	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams.h5 \
-	--sparse_rrr_feature_file ../derived_data/features_for_sp_rrr.json \
-	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass.json \
+	--sparse_rrr_fit_file ../derived_data/sparse_rrr_fits_with_selected_hyperparams_holdout.h5 \
+	--sparse_rrr_parameters_file ../derived_data/srrr_hyperparams_subclass_holdout.json \
 	--output_file $@
 
 # --------- ED FIGURE 19 ------------
@@ -827,6 +832,18 @@ fig_resp_gene.pdf: fig_resp_gene.py $(REF_TX_ANNO_FILE) $(REF_TX_DATA_FILE) $(PS
 	--output_file $@
 
 # --------- ED FIGURE 20 ------------
+
+fig_glm_fits.pdf: fig_glm_fits.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_BUTTERFLY_ATLAS_FILE) $(ATLAS_LABELS_FILE) $(FLATMAP_BUTTERFLY_PROJ_FILE) ../derived_data/glm_lf_results/L23-IT_coef.csv ../derived_data/glm_lf_results/L23-IT_loo_results.csv
+        python $< \
+        --glm_results_dir ../derived_data/glm_lf_results \
+        --wnm_data_file ../derived_data/data_for_glm_lf.csv \
+        --projected_atlas_file $(FLATMAP_BUTTERFLY_ATLAS_FILE) \
+        --atlas_labels_file $(ATLAS_LABELS_FILE) \
+        --flatmap_file $(FLATMAP_BUTTERFLY_PROJ_FILE) \
+        --annot_file $(CCF_ANNOT_FILE) \
+        --output_file $@
+
+# --------- ED FIGURE 21 ------------                                                
 
 fig_glm_fits_supplement.pdf: fig_glm_fits_supplement.py ../derived_data/data_for_glm_lf.csv $(FLATMAP_BUTTERFLY_ATLAS_FILE) $(ATLAS_LABELS_FILE) $(FLATMAP_BUTTERFLY_PROJ_FILE) $(CCF_ANNOT_FILE)
 	python $< \

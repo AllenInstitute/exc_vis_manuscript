@@ -21,52 +21,53 @@ This code is provided for reference purposes only. Parts of the code base rely o
 The code has been run using Python 3.9 and R 4.3 on a Rocky Linux 8.8 workstation. Software dependencies include:
 
 Python packages:
-- h5py
-- matplotlib
-- numpy
-- pandas
-- seaborn
-- argschema
-- allensdk
-- ipfx
-- scipy
-- scikit_posthocs
-- ccf_streamlines
-- shapely
-- skeleton_keys
-- neuron_morphology
-- tqdm
-- scikit-image
-- nrrd
-- umap-learn
-- adjustText
-- scikit-learn
-- feather
-- drcme
-- igraph
-- leidenalg
-- networkx
+- h5py 3.14.0
+- matplotlib 3.9.2
+- numpy 1.26.4
+- pandas 2.3.3
+- seaborn 0.13.2
+- argschema 3.0.4
+- allensdk 2.16.2
+- ipfx 1.0.2
+- scipy 1.13.1
+- scikit-posthocs 0.11.4
+- ccf-streamlines 1.1.4
+- shapely 2.0.6
+- skeleton_keys 0.1.1
+- neuron_morphology 1.2.2
+- tqdm 4.67.1
+- scikit-image 0.24.0
+- pynrrd 1.1.3
+- umap-learn 0.5.3
+- adjusttext 1.3.0
+- scikit-learn 1.6.1
+- feather-format 0.4.1
+- drcme 0.1.0
+- python-igraph 0.11.9
+- leidenalg 0.10.2
+- networkx 3.2.1
 
 R packages:
-- scrattch.hicat
-- arrow
+- scrattch.hicat 1.0.0
+- arrow 14.0.2
 - matrixStats
-- Matrix
-- WGCNA
-- dynamicTreeCut
-- tibble
-- dplyr
-- glmnet
-- progress
-- readr
-- purrr
-- MuMIn
-- rhdf5
-- rjson
-- limma
-- data.table
+- Matrix 1.6-1.1
+- WGCNA 1.73
+- dynamicTreeCut 1.63-1
+- tibble 3.2.1
+- dplyr 2.3.4
+- glmnet 4.1-8
+- progress 1.2.2
+- readr 2.1.4
+- purrr 1.0.2
+- MuMIn 1.47.5
+- rhdf5 2.46.1
+- rjson 0.2.21
+- limma 3.58.1
+- data.table 1.14.8
+- caret 6.0-94
 
-The code has not been tested beyond the versions listed here.
+The code has not been comprehensively tested beyond the versions listed here.
 
 ## Installation
 
